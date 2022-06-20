@@ -1,0 +1,40 @@
+.topNav{
+    margin-top: 10px;
+}
+
+.style{
+    background-color: #4c394e;
+    /* background-image: linear-gradient(to bottom, #312244, #006466); */
+    height: 100px;
+    
+}
+
+.styleFontLogo{
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+.prueba{
+    display: flex;
+    justify-content: space-between;
+}
+
+.enlaces{
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    font-size: 15px;
+}
+
+.enlaces a{
+    text-decoration: none;
+    margin-right: 30px;
+    color: white;
+
+}
+
+.enlaces a:hover{
+    text-decoration: underline;
+    color: violet;
+}
