@@ -1,0 +1,51 @@
+.cardBook{
+    margin-left: 10%;
+    width: 150px;
+    height: 100%;
+    padding: 10px;
+    border: 1px solid;
+    border-radius:9%;
+}
+.titleBook{
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0px;
+}
+
+.author{
+    font-size: 14px;
+    font-style: italic;
+    margin: 0px;
+}
+
+.stockBook{
+    margin: 10px 0px 5px 0px;
+    font-size: 13px;
+}
+
+.quantity{
+    margin: 0px;
+    font-size: 14px;
+}
+
+.quantitySelected{
+    margin: 10px 100px;
+}
+
+.addCartButton{
+    margin-top: 5px;
+    border: none;
+    color: black;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 4px;
+    
+}
+
+.addCartButton:hover{
+    background-color: #957897;
+    color: white;
+}

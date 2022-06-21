@@ -1,0 +1,16 @@
+.quantityButtom{
+    width: 25px;
+    height:25px;
+    border: none;
+    border-radius: 50%;
+}
+
+.quantityButtom:hover{
+    background-color: #957897;
+    color: white;
+}
+
+
+.quantitySelected{
+    display: inline-block; 
+}

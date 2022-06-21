@@ -12,11 +12,11 @@ export default function ButtonAppBar() {
     <Box sx={{ flexGrow: 1 }} >
       <AppBar position="static" className="topNav">
         <Toolbar className="style">
-          <Typography className="prueba" variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Typography className="formatContent" variant="h6" component="div" sx={{ flexGrow: 1 }}>
             <div className="styleFontLogo">
               Lectura
             </div>
-            <div className="enlaces">
+            <div className="linkPages">
                   <div>
                     <a href="#">Inicio</a>
                   </div>

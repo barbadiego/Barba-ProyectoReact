@@ -15,26 +15,26 @@
     color: white;
 }
 
-.prueba{
+.formatContent{
     display: flex;
     justify-content: space-between;
 }
 
-.enlaces{
+.linkPages{
     color: white;
     display: flex;
     align-items: flex-end;
     font-size: 15px;
 }
 
-.enlaces a{
+.linkPages a{
     text-decoration: none;
     margin-right: 30px;
     color: white;
 
 }
 
-.enlaces a:hover{
+.linkPages a:hover{
     text-decoration: underline;
-    color: violet;
+    color: rgb(190, 109, 190);
 }
