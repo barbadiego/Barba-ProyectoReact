@@ -15,6 +15,10 @@
     color: white;
 }
 
+.styleFontLogo p{
+    margin: -20px;
+}
+
 .formatContent{
     display: flex;
     justify-content: space-between;

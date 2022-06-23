@@ -14,7 +14,8 @@ export default function ButtonAppBar() {
         <Toolbar className="style">
           <Typography className="formatContent" variant="h6" component="div" sx={{ flexGrow: 1 }}>
             <div className="styleFontLogo">
-              Lectura
+              <p>Salón</p>
+              <p>de lectura</p>
             </div>
             <div className="linkPages">
                   <div>

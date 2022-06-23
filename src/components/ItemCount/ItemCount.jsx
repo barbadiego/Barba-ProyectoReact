@@ -1,7 +1,6 @@
 //@ts-check
 import React, { useState } from "react";
 import Button from "./Button";
-import './ItemCount.css'
 
 export default function ItemCount({ stock, initial, onAdd }) {
   const [auxInitial, setAuxInitial] = useState(initial);
