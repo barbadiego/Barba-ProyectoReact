@@ -2,14 +2,13 @@
 import './App.css';
 import NavBar from './components/NavBar/NavBar'; 
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import ItemCount from './components/ItemCount/ItemCount';
-import ItemList from './components/ItemList/ItemList';
+// import ItemCount from './components/ItemCount/ItemCount';
 
 function App() {
 
-  const onAdd = (auxInitial) => {
-      alert(`Se agregaron ${auxInitial} productos al carrito.`);  
-  }
+  // const onAdd = (auxInitial) => {
+  //     alert(`Se agregaron ${auxInitial} productos al carrito.`);  
+  // }
 
   return (
     <div className="App">
