@@ -32,7 +32,7 @@ export default function ButtonAppBar() {
                   </div>
             </div>
             <div className="cartStyle">
-              <CartWidget cant="6"/>
+              <CartWidget cant="0"/>
             </div>
           </Typography>
         </Toolbar>

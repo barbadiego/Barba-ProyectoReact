@@ -1,0 +1,55 @@
+.webStyle{
+    display: grid;
+    grid-template-areas: 
+    'bookCoverDetail titleDetail'
+    'bookCoverDetail authorDetail'
+    'bookCoverDetail priceDetail'
+    'bookCoverDetail stockDetail'
+    'bookCoverDetail descriptionDetail';
+    grid-template-columns: 3fr 9fr;
+    grid-template-rows: 50px 35px 30px 30px 400px;
+    margin-left: 200px;
+    margin-top: 50px;
+    margin-right: 200px;
+    font-family: 'Anek Latin', sans-serif;
+}
+
+.bookCoverDetail{
+    height: 700px;
+    grid-area: bookCoverDetail;
+    margin-right: 50px;
+    border-top-left-radius: 5%; 
+    border-bottom-right-radius: 5%; 
+}
+
+.titleDetail{
+    font-size: 35px;
+    grid-area: titleDetail;
+    font-weight: 600;
+    text-decoration: underline;
+    color: rgb(109, 62, 122);
+}
+
+.authorDetail{
+    font-size: 25px;
+    grid-area: authorDetail;
+    font-style: italic;
+    color: rgb(109, 74, 119);
+}
+
+.priceDetail{
+    grid-area: priceDetail;
+    font-style:oblique;
+    font-size: 18px;
+}
+
+.stockDetail{
+    grid-area: stockDetail;
+    font-style: italic;
+    font-size: 16px;
+}
+
+.descriptionDetail{
+    grid-area: descriptionDetail;
+    font-size: 20px;
+}

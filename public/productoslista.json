@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "title": "El Resplandor",
+        "author": "Stephen King",
+        "price": 3700,
+        "stock": 10,
+        "description": "Jack Torrance acepta una oferta de trabajo en un hotel de montaña que se encuentra a 65 kilómetros del pueblo más cercano. Además, las carreteras se encuentran cerradas al tráfico por las fuertes nevadas del invierno. Pronto comenzarán a manifestarse espíritus y apariciones extrañas.",
+        "pictureUrl": "https://www.libros-prohibidos.com/wp-content/uploads/2016/02/El-resplandor-portada.jpg"
+    },
+    {
+        "id": 2,
+        "title": "El Hobbit",
+        "author": "J.R.R. Tolkien",
+        "price": 2700,
+        "stock": 5,
+        "description": "Novela de J.R.R. Tolkien publicada en el año 1937. En ella se relata la historia de Bilbo Bolsón, y de su viaje a la Montaña Solitaria junto con Gandalf y Thorin y Compañía para recuperar el tesoro custodiado por el dragón Smaug y recuperar también el reino de Erebor.",
+        "pictureUrl": "https://planetadelibrosar2.cdnstatics.com/usuaris/libros/fotos/291/original/portada_el-hobbit_j-r-r-tolkien_202002051453.jpg"
+    },
+    {
+        "id": 3,
+        "title": "Misery",
+        "author": "Stephen King",
+        "price": 3000,
+        "stock": 0,
+        "description": "Paul Shledon es un escritor que sufre un grave accidente y recobra el conocimiento en una apartada casa en la que vive una misteriosa mujer, corpulenta y de extraño carácter. Se trata de una antigua enfermera, involucrada en varias muertes misteriosas ocurridas en diversos hospitales.",
+        "pictureUrl": "https://i0.wp.com/elgeneracionalpost.com/wp-content/uploads/2020/06/misery-stephen-king.jpg?fit=1029%2C1600&ssl=1"
+    },
+    {
+        "id": 4,
+        "title": "El señor de las moscas",
+        "author": "William Golding",
+        "price": 2800,
+        "stock": 24,
+        "description": "Una treintena de muchachos son los únicos supervivientes de un naufragio en el que perecen todos los adultos. Enseguida se plantea cómo sobrevivir en tales condiciones, y no tardan en crearse dos grupos con sus respectivos líderes. Ralph se convierte en el cabecilla de quienes están dispuestos a construir refugios y a recolectar, mientras que Jack se convierte en el jefe de los cazadores, animados por un espíritu más aventurero. Las tensiones entre ambos bandos desembocan en un enfrentamiento que se resuelve en un baño de sangre.",
+        "pictureUrl": "https://www.alianzaeditorial.es/imagenes/libros/grande/9788420674179-el-senor-de-las-moscas.jpg"
+    },
+    {
+        "id": 5,
+        "title": "Fahrenheit 451",
+        "author": "Ray Bradbury",
+        "price": 2200,
+        "stock": 11,
+        "description": "La novela presenta una sociedad estadounidense del futuro en la que los libros están prohibidos y existen «bomberos» que queman cualquiera que encuentren.",
+        "pictureUrl": "https://lahierbaroja.files.wordpress.com/2014/01/be916-portada2bjose2bcopia.jpg"
+    }
+]
