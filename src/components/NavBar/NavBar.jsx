@@ -6,6 +6,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import './NavBar.css';
 import CartWidget from '../CartWidget/CartWidget';
+import { Link } from 'react-router-dom';
 
 export default function ButtonAppBar() {
   return (
@@ -19,16 +20,16 @@ export default function ButtonAppBar() {
             </div>
             <div className="linkPages">
                   <div>
-                    <a href="#">Inicio</a>
+                    <Link to={"/"}>Inicio</Link>
                   </div>
                   <div>
-                    <a href="#">Productos</a>
+                    <Link to={"/"}>Productos</Link>
                   </div>
                   <div>
-                    <a href="#">Consultas</a>
+                    <Link to={"/"}>Consultas</Link>
                   </div>
                   <div>
-                    <a href="#">Contacto</a>
+                    <Link to={"/"}>Contacto</Link>
                   </div>
             </div>
             <div className="cartStyle">

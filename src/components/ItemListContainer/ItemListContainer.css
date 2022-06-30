@@ -3,3 +3,14 @@
     place-content: center;
     font-size: 40px;
 }
+
+.linksCategory{
+    display: flex;
+}
+
+.linksCategory li{
+    margin: 0px 15px;
+    list-style-type: none;
+    font-family: 'Anek Latin', sans-serif;
+    font-size: 14px;
+}

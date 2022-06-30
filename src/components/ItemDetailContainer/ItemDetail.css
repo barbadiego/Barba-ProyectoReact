@@ -5,9 +5,10 @@
     'bookCoverDetail authorDetail'
     'bookCoverDetail priceDetail'
     'bookCoverDetail stockDetail'
+    'bookCoverDetail cartButton'
     'bookCoverDetail descriptionDetail';
     grid-template-columns: 3fr 9fr;
-    grid-template-rows: 50px 35px 30px 30px 400px;
+    grid-template-rows: 50px 35px 30px 20px 150px;
     margin-left: 200px;
     margin-top: 50px;
     margin-right: 200px;
@@ -52,4 +53,8 @@
 .descriptionDetail{
     grid-area: descriptionDetail;
     font-size: 20px;
+}
+
+.cartButton{
+    grid-area: cartButton;
 }

@@ -1,4 +1,5 @@
 .cardBook{
+    margin: 0px 50px;
     margin-left: 10%;
     width: 200px;
     padding: 10px;
@@ -19,7 +20,8 @@
 }
 
 .pictureBook{
-    margin: 20px;;
+    margin: 20px;
+    height: 240px;
 }
 
 .stockBook{
@@ -40,11 +42,9 @@
     background-color: #beaed3;
     padding: 5px 5px;
     text-align: center;
-    text-decoration: none;
     display: inline-block;
     font-size: 12px;
     border-radius: 4px;
-    
 }
 
 .detailProduct:hover{
@@ -52,12 +52,10 @@
     color: white;
 }
 
-/* .quantity{
-    margin: 0px;
-    font-size: 14px;
+.detailProduct1{
+    text-decoration: none;
 }
 
-.quantitySelected{
-    margin: 10px 100px;
-} */
-
+.detailProduct1:hover{
+    color: white;
+}

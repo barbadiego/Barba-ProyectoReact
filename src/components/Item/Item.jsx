@@ -1,9 +1,10 @@
 //@ts-check
 import React from 'react'
+import { Link } from 'react-router-dom';
 import './Item.css'
 
 export default function Item( { producto }) {
-    const {title, author, stock, price, pictureUrl} = producto;
+    const {title, author, stock, price, pictureUrl, id} = producto;
   return (
     <>
         <div className="cardBook">
@@ -12,10 +13,7 @@ export default function Item( { producto }) {
         <img src={pictureUrl} className="pictureBook"/>
         <p className="priceBook">Precio: ${price}</p>
         <p className="stockBook">Stock: {stock}</p>
-        <button disabled className="detailProduct">Ver detalles</button>
-        {/* <p className="quantity">Cantidad:</p> */}
-        {/* {/* <Button auxInitial={auxInitial} add={add} subtract={subtract} stock={stock} /> */}
-        {/* <button onClick={() => onAdd(auxInitial)} disabled={stock < 1 ? true : false} className="addCartButton">Agregar al carrito</button> */}
+        <button disabled className="detailProduct"><Link to={`/item/${id}`} className="detailProduct1">Ver detalle</Link></button>
         </div>
     </>
   )

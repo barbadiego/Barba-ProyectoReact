@@ -5,6 +5,7 @@
         "author": "Stephen King",
         "price": 3700,
         "stock": 10,
+        "category": "terror",
         "description": "Jack Torrance acepta una oferta de trabajo en un hotel de montaña que se encuentra a 65 kilómetros del pueblo más cercano. Además, las carreteras se encuentran cerradas al tráfico por las fuertes nevadas del invierno. Pronto comenzarán a manifestarse espíritus y apariciones extrañas.",
         "pictureUrl": "https://www.libros-prohibidos.com/wp-content/uploads/2016/02/El-resplandor-portada.jpg"
     },
@@ -14,6 +15,7 @@
         "author": "J.R.R. Tolkien",
         "price": 2700,
         "stock": 5,
+        "category": "fantasia",
         "description": "Novela de J.R.R. Tolkien publicada en el año 1937. En ella se relata la historia de Bilbo Bolsón, y de su viaje a la Montaña Solitaria junto con Gandalf y Thorin y Compañía para recuperar el tesoro custodiado por el dragón Smaug y recuperar también el reino de Erebor.",
         "pictureUrl": "https://planetadelibrosar2.cdnstatics.com/usuaris/libros/fotos/291/original/portada_el-hobbit_j-r-r-tolkien_202002051453.jpg"
     },
@@ -23,6 +25,7 @@
         "author": "Stephen King",
         "price": 3000,
         "stock": 0,
+        "category": "terror",
         "description": "Paul Shledon es un escritor que sufre un grave accidente y recobra el conocimiento en una apartada casa en la que vive una misteriosa mujer, corpulenta y de extraño carácter. Se trata de una antigua enfermera, involucrada en varias muertes misteriosas ocurridas en diversos hospitales.",
         "pictureUrl": "https://i0.wp.com/elgeneracionalpost.com/wp-content/uploads/2020/06/misery-stephen-king.jpg?fit=1029%2C1600&ssl=1"
     },
@@ -32,6 +35,7 @@
         "author": "William Golding",
         "price": 2800,
         "stock": 24,
+        "category": "ficcion",
         "description": "Una treintena de muchachos son los únicos supervivientes de un naufragio en el que perecen todos los adultos. Enseguida se plantea cómo sobrevivir en tales condiciones, y no tardan en crearse dos grupos con sus respectivos líderes. Ralph se convierte en el cabecilla de quienes están dispuestos a construir refugios y a recolectar, mientras que Jack se convierte en el jefe de los cazadores, animados por un espíritu más aventurero. Las tensiones entre ambos bandos desembocan en un enfrentamiento que se resuelve en un baño de sangre.",
         "pictureUrl": "https://www.alianzaeditorial.es/imagenes/libros/grande/9788420674179-el-senor-de-las-moscas.jpg"
     },
@@ -41,7 +45,58 @@
         "author": "Ray Bradbury",
         "price": 2200,
         "stock": 11,
+        "category": "ficcion",
         "description": "La novela presenta una sociedad estadounidense del futuro en la que los libros están prohibidos y existen «bomberos» que queman cualquiera que encuentren.",
         "pictureUrl": "https://lahierbaroja.files.wordpress.com/2014/01/be916-portada2bjose2bcopia.jpg"
+    },
+    {
+        "id": 6,
+        "title": "Juego de tronos",
+        "author": "George R. R. Martin",
+        "price": 6250,
+        "stock": 7,
+        "category": "fantasia",
+        "description": "En el legendario mundo de los Siete Reinos; donde el verano puede durar décadas y el invierno toda una vida; y donde rastros de una magia inmemorial surgen en los rincones más sombríos; la tierra del norte; Invernalia; está resguardada por un colosal muro de hielo que detiene a fuerzas oscuras y sobrenaturales. En este majestuoso escenario; lord Stark y su familia se encuentran en el centro de un conflicto que desatará todas las pasiones: la traición y la lealtad; la compasión y la sed de venganza; el amor y el poder; la lujuria y el incesto; todo ello para ganar la más mortal de las batallas: el trono de hierro; una poderosa trampa que atrapará a los personajes -y al lector. Los paisajes tienen más en común con la cadencia de Shakespeare; la intensidad de Kipling o el sentido aventurero de Melville; que con la épica de Tolkien. El auténtico ariete de Martin son las esquirlas del alma humana; y sus criaturas se desenvuelven en los territorios de lo carnal sin necesidad de magia o fuegos artificiales. No hay en la obra del escritor anillos ni pócimas; sino espadas; ejércitos y muros. En las páginas de Martin conviven Hamlet y Chéjov; Milton y Dickens; Conan y El Rey Arturo; en una extraña mezcla que avanza con puño de hierro; sustentado en un pilar gris y oscuro: la certeza de que lo peor aún está por llegar.",
+        "pictureUrl": "https://www.tematika.com/media/catalog/Ilhsa/Imagenes/542885.jpg"
+    },
+    {
+        "id": 7,
+        "title": "IT (Eso)",
+        "author": "Stephen King",
+        "price": 5300,
+        "stock": 2,
+        "category": "terror",
+        "description": "El libro que inspiró a la película homónima. ¿Quién o qué mutila y mata a los niños de un pequeño pueblo norteamericano? ¿Por qué llega cíclicamente el horror a Derry en forma d e un payaso siniestro que va sembrando la destrucción a su paso? Esto es lo que se proponen averiguar los protagonistas de esta novela. Tras veintisiete años de tranquilidad y lejanía una antigua promesa infantil les hace volver al lugar en el que vivieron su infancia y juventud como una terrible pesadilla. Regresan a Derry para enfrentarse con su pasado y enterrar definitivamente laamenaza que los amargó durante su niñez. Saben que pueden morir; pero son conscientes de que no conocerán la paz hasta que aquella cosa sea destruida para siempre.",
+        "pictureUrl": "https://www.tematika.com/media/catalog/Ilhsa/Imagenes/640945.jpg"
+    },
+    {
+        "id": 8,
+        "title": "El universo en tu mano",
+        "author": "Christophe Galfard",
+        "price": 3500,
+        "stock": 17,
+        "category": "ciencia",
+        "description": "No estás solo en el universo. Y no estás solo en este viaje por el universo. Estás tumbado mirando el cielo en una playa cuando alguien te coge de la mano. Te guía en una odisea alucinante hasta los agujeros negros; las galaxias más lejanas y el inicio mismo del cosmos.",
+        "pictureUrl": "https://www.tematika.com/media/catalog/Ilhsa/Imagenes/688158.jpg"
+    },
+    {
+        "id": 9,
+        "title": "Messi, el genio completo",
+        "author": "Ariel Senosiain",
+        "price": 2000,
+        "stock": 4,
+        "category": "deportes",
+        "description": "¿Por qué un genio como Messi no consiguió por años lo que muchos otros; no tan geniales; sí habían conseguido? En este libro están las respuestas. El experimentado periodista Ariel Senosiain hizo 73 entrevistas y consiguió lo que nadie pudo: que hablasen hasta el padre del propio Messi; el DT Alejandro Sabella y el ex presidente de la FIFA Joseph Blatter. La recreación vívida de las jugadas clave son un regalo para los amantes del fútbol y el agudo análisis conquista a todos los lectores. Una lectura atrapante. Un relato épico. Un largo camino desde las lágrimas de dolor hasta las de emoción.",
+        "pictureUrl": "https://www.tematika.com/media/catalog/Ilhsa/Imagenes/690469.jpg"
+    },
+    {
+        "id": 10,
+        "title": "La llamada de Cthulhu",
+        "author": "Howard Lovecraft",
+        "price": 3570,
+        "stock": 12,
+        "category": "terror",
+        "description": "La novela presenta una sociedad estadounidense del futuro en la que los libros están prohibidos y existen «bomberos» que queman cualquiera que encuentren.",
+        "pictureUrl": "https://www.tematika.com/media/catalog/Ilhsa/Imagenes/682423.jpg"
     }
 ]

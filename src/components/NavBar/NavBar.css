@@ -4,14 +4,11 @@
 
 .style{
     background-color: #4c394e;
-    /* background-image: linear-gradient(to bottom, #312244, #006466); */
     height: 100px;
-    
 }
 
 .styleFontLogo{
     font-size: 40px;
-    font-family: 'Roboto', sans-serif;
     color: white;
     font-family: 'Anek Latin', sans-serif;
 }

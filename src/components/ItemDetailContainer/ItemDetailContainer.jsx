@@ -1,15 +1,15 @@
 //@ts-check
 import React, { useEffect, useState } from 'react'
 import ItemDetail from './ItemDetail';
+import { useParams } from "react-router-dom";
 
 export default function ItemDetailContainer() {
 
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
     const [item, setItem] = useState({});
+    let { itemId } = useParams();
 
-
-    let itemId = 1;
     useEffect( ()=>{
         let bookDetail = new Promise((res, rej) =>{
                 setTimeout( ()=>{
@@ -33,13 +33,10 @@ export default function ItemDetailContainer() {
                 setLoading(false);
             })
 
-    }, [])
+    }, [itemId])
 
     return (
         <>
-            {/* {loading && "Cargando libro."}
-            {error && "Error al cargar listado. Por favor, recargar página."}
-            {item && <ItemDetail item={item}/>} */}
             {loading ? <div>Cargando libro.</div> : <ItemDetail item={item} />}
             {error && "Error al cargar listado. Por favor, recargar página."}
         </>
