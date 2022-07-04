@@ -1,7 +1,7 @@
 .cardBook{
     margin: 0px 50px;
     margin-left: 10%;
-    width: 200px;
+    width: 220px;
     padding: 10px;
     border: 4px double #4c394e;
     border-top-left-radius: 30px;;
@@ -21,7 +21,7 @@
 
 .pictureBook{
     margin: 20px;
-    height: 240px;
+    height: 260px;
 }
 
 .stockBook{
