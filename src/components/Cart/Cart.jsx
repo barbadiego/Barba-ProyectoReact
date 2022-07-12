@@ -18,7 +18,7 @@ export default function Cart() {
   return (
     <>
     <button onClick={() => clear()} className="buttonCart">Vaciar carrito</button>
-    <div>Monto total: ${totalPrice()}</div>
+    <div className="totalPriceStyleText">Monto total: ${totalPrice()}</div>
     <div className="container-fluid">
       <tbody>
           <tr>

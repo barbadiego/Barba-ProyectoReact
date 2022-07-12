@@ -3,6 +3,13 @@
     justify-content: space-around;
 } */
 
+.totalPriceStyleText{
+    font-size: 35px;
+    font-style: italic;
+    font-weight: 600;
+    color: rgb(88, 61, 124);
+    text-decoration: underline;
+}
 
 .buttonCart{
     margin-top: 5px;
