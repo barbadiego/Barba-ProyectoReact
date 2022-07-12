@@ -6,8 +6,8 @@ import { myContext } from '../CartContext'
 
 
 export default function ItemDetail( { item } ) {
-  const {id, title, author, price, description, pictureUrl, stock} = item
-  const { addItem, removeItem, clear, cart } = useContext(myContext)
+  const { title, author, price, description, pictureUrl, stock} = item
+  const { addItem } = useContext(myContext)
 
   const onAdd = (auxInitial) => {
     addItem(item, auxInitial);
@@ -25,9 +25,6 @@ export default function ItemDetail( { item } ) {
 
           <div className="cartButton">
             <ItemCount stock={stock} onAdd={onAdd} />
-            <button onClick={() => removeItem({id})} className="addCartButton"> Quitar producto</button>
-            <button onClick={() => clear()} className="addCartButton">Limpiar carrito</button>
-            <button onClick={() => console.log(cart)} className="addCartButton">Show Cart</button>
           </div>
       </div>
     </>

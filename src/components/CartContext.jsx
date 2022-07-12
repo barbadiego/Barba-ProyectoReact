@@ -31,10 +31,20 @@ export default function CartContext( { children } ) {
         }
         item.stock = item.stock - quantity;
     }
+    
+    // Muestra precio total en cart.jsx
+    function totalPrice(){
+        return cart.reduce((acc, element) => acc + element.item.price * element.quantity, 0)
+    }
+
+    // Muestra cantidad total de items en carrito.
+    function cartTotalProducts(){
+        return cart.reduce((acc, element) => acc + element.quantity, 0)
+    }
 
     // Remueve producto de carrito.
-    function removeItem(item){
-        setCart((prevState) => prevState.filter((element) => element.item.id !== item.id))
+    function removeItem(id){
+        setCart(cart.filter((element) => element.item.id !== id))
     }
 
     // limpia carrito.
@@ -42,9 +52,10 @@ export default function CartContext( { children } ) {
         setCart([]);
     }
 
+
   return (
     <div>
-        <myContext.Provider value={{ addItem, removeItem, clear, setCart, cart }}>
+        <myContext.Provider value={{ addItem, removeItem, clear, setCart, cart, totalPrice, cartTotalProducts }}>
             {children}
         </myContext.Provider>
     </div>

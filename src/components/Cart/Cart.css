@@ -1,0 +1,65 @@
+/* .container-fluid{
+    display: flex;
+    justify-content: space-around;
+} */
+
+
+.buttonCart{
+    margin-top: 5px;
+    border: none;
+    color: black;
+    background-color: #beaed3;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 5%;
+
+}
+
+.buttonCart:hover{
+    background-color: #957897;
+    color: white;
+}
+
+/* .formatCart{
+    display: flex;
+    justify-content: space-evenly;
+} */
+
+.columnBookCover{
+    padding: 0px 140px;
+}
+.bookCoverCart{
+    height:200px;
+    margin: 0px 50px 0px 100px;;
+}
+
+.columnAuthor{
+    padding: 0px 100px 0px 0px;
+}
+.authorCart{
+    padding: 0px 50px 0px 10px;
+}
+
+.columnTitle{
+    padding: 0px 120px 0px 50px;
+}
+.titleCart{
+    padding: 0px 100px 0px 50px;
+}
+
+.columnQuantity{
+    padding: 0px 120px 0px 50px;
+}
+.quantityCart{
+    padding: 0px 50px;
+}
+
+.columnPriceItemsCart{
+    padding: 0px 50px 0px 10px;
+}
+.priceItemsCart{
+    padding: 0px 100px;
+}

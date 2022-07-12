@@ -13,5 +13,6 @@ span{
     display: grid;
     place-content: center;
     border: solid 2px white;
+    color: white;
 }
 

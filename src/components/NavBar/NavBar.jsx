@@ -1,14 +1,18 @@
 //@ts-check
-import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import './NavBar.css';
-import CartWidget from '../CartWidget/CartWidget';
+import * as React from 'react';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { myContext } from '../CartContext';
+import CartWidget from '../CartWidget/CartWidget';
+import './NavBar.css';
 
 export default function ButtonAppBar() {
+  const { cart } = useContext(myContext)
+
   return (
     <Box sx={{ flexGrow: 1 }} >
       <AppBar position="static" className="topNav">
@@ -33,7 +37,7 @@ export default function ButtonAppBar() {
                   </div>
             </div>
             <div className="cartStyle">
-              <CartWidget cant="0"/>
+              <div>{cart.length !== 0 ? <Link to={`/cart`}><CartWidget /></Link> : ""}</div>
             </div>
           </Typography>
         </Toolbar>
