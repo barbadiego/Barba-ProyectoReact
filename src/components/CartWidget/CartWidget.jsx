@@ -8,6 +8,7 @@ export default function CartWidget() {
   const { cartTotalProducts } = useContext(myContext)
   return (
     <div>
+        {/* Se llama a function de CartContext que muestra el total de productos en carrito */}
         <HiOutlineShoppingCart size={50} className="carrito"/><span>{ cartTotalProducts() }</span>
     </div>
   )

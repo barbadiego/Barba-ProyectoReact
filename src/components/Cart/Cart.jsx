@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 import './Cart.css'
 
 export default function Cart() {
-
     const { cart, clear, removeItem, totalPrice } = useContext(myContext)
 
+    // Return temprano, si no hay productos agregados a carrito muestra el siguiente mensaje:
     if(cart.length === 0){
       return (
       <>
@@ -14,6 +14,7 @@ export default function Cart() {
         <Link to={"/"}>Ir a Main page para agregar productos</Link>
       </>)
     }
+    // Desglose de carrito
   return (
     <>
     <button onClick={() => clear()} className="buttonCart">Vaciar carrito</button>

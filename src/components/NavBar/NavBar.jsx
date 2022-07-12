@@ -37,6 +37,7 @@ export default function ButtonAppBar() {
                   </div>
             </div>
             <div className="cartStyle">
+              {/* If ternario, si no hay productos agregados no muestra el logo de carrito */}
               <div>{cart.length !== 0 ? <Link to={`/cart`}><CartWidget /></Link> : ""}</div>
             </div>
           </Typography>
