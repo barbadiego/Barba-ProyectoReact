@@ -1,8 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
+import './index.css';
 import reportWebVitals from './reportWebVitals';
+
+import { initializeApp } from "firebase/app";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAi9JIiNO3N9Sqjue6ZvM3gkx9jc5Xo9E4",
+  authDomain: "barba-ecommerceproject.firebaseapp.com",
+  projectId: "barba-ecommerceproject",
+  storageBucket: "barba-ecommerceproject.appspot.com",
+  messagingSenderId: "724130284025",
+  appId: "1:724130284025:web:5cc80fdb020836cfecbd28"
+};
+
+initializeApp(firebaseConfig);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

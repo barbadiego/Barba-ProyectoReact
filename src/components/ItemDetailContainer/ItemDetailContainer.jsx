@@ -1,7 +1,9 @@
 //@ts-check
-import React, { useEffect, useState } from 'react'
-import ItemDetail from './ItemDetail';
+import { doc, getDoc, getFirestore } from 'firebase/firestore';
+import React, { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
+import ItemDetail from './ItemDetail';
+
 
 export default function ItemDetailContainer() {
 
@@ -11,20 +13,19 @@ export default function ItemDetailContainer() {
     let { itemId } = useParams();
 
     useEffect( ()=>{
+        const db = getFirestore();
+        // @ts-ignore
+        const detailedItem = doc(db, 'books', itemId)
+        
         let bookDetail = new Promise((res, rej) =>{
-                setTimeout( ()=>{
-                  fetch("http://localhost:3000/productoslista.json")
-                  .then((response)=> response.json())
-                  .then((data)=>{
-                      res(data);
-                  })
-                }, 0)
+                setTimeout( ()=>{res(getDoc(detailedItem))}
+                , 2000)
             });
 
         bookDetail
-            .then((resultado)=> {
-                let aux = resultado.find((elemento) => elemento.id == itemId)
-                setItem(aux);
+            .then((res)=> {
+                console.log(res.data())
+                setItem({...res.data(), id: res.id});
             })
             .catch((error)=> {
                 setError(true);

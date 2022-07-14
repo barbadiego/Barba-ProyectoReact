@@ -1,4 +1,5 @@
 // @ts-nocheck
+import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore';
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import ItemList from "../ItemList/ItemList";
@@ -11,32 +12,49 @@ export default function ItemListContainer() {
   let {categoryFilter} = useParams();
   
   useEffect(() => {
-      
-    let books = new Promise((res, rej) =>{
-      setTimeout(() => {
-        fetch("http://localhost:3000/productoslista.json")
-          .then((response) => response.json())
-          .then((data) =>{
-            res(data);
-          })
-      }, 2000)
+    const db = getFirestore();
+    const completeCollection = collection(db, 'books');
+    
+    getDocs(completeCollection).then((res) => {
+        const auxArray = res.docs.map(item=> ({ ...item.data(), id: item.id }))
+        setProductos(auxArray)
     })
+      
+    if (!categoryFilter){
+      const collectionRef = new Promise((res, rej)=>{
+        setTimeout(() =>{res(getDocs(completeCollection))}
+        , 2000)
+      })
 
-    books
-      .then((resultado) => {
-          if (!categoryFilter){
-              setProductos(resultado)
-            } else {
-              let booksFiltered = resultado.filter((elemento) => elemento.category === categoryFilter.toLowerCase())
-              setProductos(booksFiltered)
-            }
-      })
-      .catch((err) => {
-        setError(true)
-      })
-      .finally(() => {
-        setLoading(false)
-      })
+      collectionRef
+        .then((res) =>{
+          const completeArray = res.docs.map((element)=>({...element.data(), id: element.id}));
+          setProductos(completeArray);
+        })
+        .catch((error)=>{
+          setError(true);
+        })
+        .finally( ()=>{
+          setLoading(false);
+        })
+    } else {
+      const collectionFilt = query(completeCollection, where('category', '==', categoryFilter));
+          let filteredArray = new Promise((res, rej)=>{
+            setTimeout(()=>{res(getDocs(collectionFilt))}, 2000)
+          })
+        
+          filteredArray.then((res)=> {
+            const collectionFiltered = res.docs.map((element)=>({...element.data(), id: element.id}));
+            setProductos(collectionFiltered);
+            console.log(collectionFiltered)
+          })
+          .catch((error)=>{
+            setError(true);
+           })
+           .finally( ()=>{
+            setLoading(false);
+           })
+    }
 }, [categoryFilter])
     
   return (
