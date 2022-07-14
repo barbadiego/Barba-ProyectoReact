@@ -7,7 +7,6 @@ import Cart from './components/Cart/Cart'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CartContext from './components/CartContext';
 import React from 'react';
-import FirebaseAllTest from './components/Firebase/FirebaseAllTest';
 
 function App() {
 
@@ -20,7 +19,6 @@ function App() {
             <Route path="/" element={<ItemListContainer />} />
             <Route path="/category/:categoryFilter" element={<ItemListContainer />} />
             <Route path="/item/:itemId" element={<ItemDetailContainer />} />
-            <Route path="/testconsulta" element={<FirebaseAllTest/>}/>
             <Route path="/cart" element={<Cart />} />
           </Routes>
         </BrowserRouter>
