@@ -5,6 +5,7 @@ export const myContext = createContext();
 
 export default function CartContext( { children } ) {
     const [cart, setCart] = useState([]);
+    const [totPrice, setTotPrice] = useState()
 
     // Valida si ya existe producto id en carrito.
     const isInCart = (id) => {
@@ -34,8 +35,12 @@ export default function CartContext( { children } ) {
     
     // Muestra precio total en cart.jsx
     function totalPrice(){
-        return cart.reduce((acc, element) => acc + element.item.price * element.quantity, 0)
+        // return cart.reduce((acc, element) => acc + element.item.price * element.quantity, 0)
+        setTotPrice(cart.reduce((acc, element) => acc + element.item.price * element.quantity, 0))
+        console.log(totPrice)
     }
+
+    console.log(totPrice)
 
     // Muestra cantidad total de items en carrito.
     function cartTotalProducts(){
@@ -55,7 +60,7 @@ export default function CartContext( { children } ) {
 
   return (
     <div>
-        <myContext.Provider value={{ addItem, removeItem, clear, setCart, cart, totalPrice, cartTotalProducts }}>
+        <myContext.Provider value={{ addItem, removeItem, clear, setCart, cart, totalPrice, totPrice, cartTotalProducts }}>
             {children}
         </myContext.Provider>
     </div>

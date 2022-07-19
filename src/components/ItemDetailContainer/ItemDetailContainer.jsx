@@ -24,7 +24,6 @@ export default function ItemDetailContainer() {
 
         bookDetail
             .then((res)=> {
-                console.log(res.data())
                 setItem({...res.data(), id: res.id});
             })
             .catch((error)=> {
