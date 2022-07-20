@@ -35,12 +35,8 @@ export default function CartContext( { children } ) {
     
     // Muestra precio total en cart.jsx
     function totalPrice(){
-        // return cart.reduce((acc, element) => acc + element.item.price * element.quantity, 0)
-        setTotPrice(cart.reduce((acc, element) => acc + element.item.price * element.quantity, 0))
-        console.log(totPrice)
+        return cart.reduce((acc, element) => acc + element.item.price * element.quantity, 0)
     }
-
-    console.log(totPrice)
 
     // Muestra cantidad total de items en carrito.
     function cartTotalProducts(){

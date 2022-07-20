@@ -65,7 +65,6 @@ export default function ItemListContainer() {
         <li><Link to={"/category/ficcion"}>Ficción</Link></li>
         <li><Link to={"/category/deportes"}>Deportes</Link></li>
         <li><Link to={"/category/ciencia"}>Ciencia</Link></li>
-        <li><Link to={"/checkout"}>checkout</Link></li>
       </ul>
       <div>
         {loading && "Cargando listado de libros"}{" "}
