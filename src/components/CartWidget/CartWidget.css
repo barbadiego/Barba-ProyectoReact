@@ -1,18 +1,23 @@
 .carrito{
     color:white;
+    position: absolute;
+    top: 144px;
+    right: 30px;
 }
 
 span{
+    font-family: 'Anek Latin', sans-serif;
     position: absolute;
-    top: 20px;
-    right: 10px;
-    background-color: black;
-    height: 25px;
-    width: 25px;
+    top: 141px;
+    right: 15px;
+    background-color: #725dac;
+    height: 20px;
+    width: 20px;
     border-radius: 50%;
     display: grid;
     place-content: center;
-    border: solid 2px white;
-    color: white;
+    border: solid 2px #4c394e;
+    color: black;
+    font-weight: 600;
 }
 

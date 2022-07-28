@@ -1,7 +1,8 @@
-import React, { useContext }  from 'react'
-import { myContext } from '../CartContext'
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import './Cart.css'
+import { myContext } from '../CartContext';
+import Checkout from '../Checkout/Checkout';
+import './Cart.css';
 
 export default function Cart() {
     const { cart, clear, removeItem, totalPrice } = useContext(myContext)
@@ -17,36 +18,31 @@ export default function Cart() {
     // Desglose de carrito
   return (
     <>
-    <Link to={"/checkout"}><button className="buttonForm">Llenar formulario para completar pedido.</button></Link>
-    <button onClick={() => clear()} className="buttonCart">Vaciar carrito</button>
-    <div className="totalPriceStyleText">Monto total: ${totalPrice()}</div>
-    <div className="container-fluid">
-      <tbody>
-          <tr>
-            <th className="columnBookCover">Tapa</th>
-            <th className="columnAuthor">Autor</th>
-            <th className="columnTitle">Título</th>
-            <th className="columnQuantity">Cantidad</th>
-            <th className="columnPriceItemsCart">Monto</th>
-          </tr>
-        </tbody>
+    {/* <Link to={"/checkout"}><button className="buttonForm">Llenar formulario para completar pedido.</button></Link> */}
+    {/* <button onClick={() => clear()} className="buttonCart">Vaciar carrito</button> */}
+    {/* <div className="totalPriceStyleText">Monto total: ${totalPrice()}</div> */}
+    <div className="boxCart">
+        <div className="container-fluid">
+                <p className="columnBookCover">Portada</p>
+                <p className="columnAuthor">Autor</p>
+                <p className="columnTitle">Título</p>
+                <p className="columnQuantity">Cantidad</p>
+                <p className="columnPriceItemsCart">Monto</p>
+        </div>
+        <div >
+            {cart.map((producto) => (
+                <div key={producto.item.id} className="formatCart">
+                  <p className="bookCoverCart"><img src={producto.item.pictureUrl} className="bookCoverCart" alt="" /></p>
+                  <p className="authorCart">{producto.item.author}</p>
+                  <p className="titleCart">{producto.item.title}</p>
+                  <p className="quantityCart">{producto.quantity}</p>
+                  <p className="priceItemsCart">${producto.item.price * producto.quantity}</p>
+                  <button onClick={()=>{removeItem(producto.item.id)}} className="buttonCart">X</button>
+                </div>
+            ))}
+        </div>
     </div>
-    <div className="formatCart">
-        {cart.map((producto) => (
-            <div key={producto.item.id}>
-              <tbody>
-                <tr>
-                  <th className="bookCoverCart"><img src={producto.item.pictureUrl} className="bookCoverCart" alt="" /></th>
-                  <th className="authorCart">{producto.item.author}</th>
-                  <th className="titleCart">{producto.item.title}</th>
-                  <th className="quantityCart">{producto.quantity}</th>
-                  <th className="priceItemsCart">${producto.item.price * producto.quantity}</th>
-                  <button onClick={()=>{removeItem(producto.item.id)}} className="buttonCart" style={{marginTop: "90%"}}>Quitar producto</button>
-                </tr>  
-              </tbody>
-            </div>
-        ))}
-    </div>
+    < Checkout />
     </>
   )
 }

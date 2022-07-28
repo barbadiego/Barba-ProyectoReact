@@ -1,0 +1,20 @@
+.bottomBar{
+    margin-top: 20px;
+    height:60px;
+    width: 100%;
+    background-color: #4c394e;
+    position: absolute;
+}
+
+.bottomText{
+    color:white;
+}
+
+.bottomText p{
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    padding: 6px 0px 0px 0px;
+    font-style: italic;
+    font-family: 'Anek Latin', sans-serif;
+}

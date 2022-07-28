@@ -30,11 +30,16 @@ export default function Checkout() {
 
   return (
     <>
-        <input className="inputprueba" onChange={(e) => setName(e.target.value)} type={"text"} placeholder={"Ingresar nombre"}></input>
-        <input className="inputprueba" onChange={(e) => setTel(e.target.value)} type={"tel"} placeholder={"Ingresar teléfono"}></input>
-        <input className="inputprueba" onChange={(e) => setEmail(e.target.value)} type={"email"} placeholder={"Ingresar email"}></input>
-        <button onClick={handleClickBuy}>Confirmar pedido</button>
-        <p>ID de compra: {buyId}</p>
+        <div className="styleFontCheckout">
+          <p style={{margin: "0px"}}>Por favor, completar los datos del formulario para crear la orden:</p>
+          <div className="prueba3">
+            <input className="inputprueba" onChange={(e) => setName(e.target.value)} type={"text"} placeholder={"Ingresar nombre"}></input>
+            <input className="inputprueba" onChange={(e) => setTel(e.target.value)} type={"tel"} placeholder={"Ingresar teléfono"}></input>
+            <input className="inputprueba" onChange={(e) => setEmail(e.target.value)} type={"email"} placeholder={"Ingresar email"}></input>
+            <button onClick={handleClickBuy} className="styleButtonCheckout">Confirmar pedido</button>
+          </div>
+          {buyId === "" ? "" : <p style={{margin: "0px", marginTop: "5px"}}>Su ID de pedido es: {buyId}</p>}
+        </div>
     </>
   )
 }

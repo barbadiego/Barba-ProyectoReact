@@ -1,4 +1,31 @@
+.prueba3{
+    display: flex;
+    justify-content: flex-start;
+    /* margin: 10px; */
+}
+
 .inputprueba{
-    display: block;
-    margin: 10px;
+    margin: 0px 10px 0px 0px;
+    font-family: 'Anek Latin', sans-serif;
+}
+
+.styleFontCheckout{
+    font-family: 'Anek Latin', sans-serif;
+}
+
+.styleButtonCheckout{
+    font-family: 'Anek Latin', sans-serif;
+    border: none;
+    color: black;
+    background-color: #beaed3;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5%;
+}
+
+.styleButtonCheckout:hover{
+    background-color: #957897;
+    color: white;
 }

@@ -1,15 +1,15 @@
 //@ts-check
-import React, { useContext } from 'react'
-import { HiOutlineShoppingCart } from 'react-icons/hi';
-import './CartWidget.css'
-import { myContext } from '../CartContext'
+import React, { useContext } from 'react';
+import { RiShoppingCartLine } from 'react-icons/ri';
+import { myContext } from '../CartContext';
+import './CartWidget.css';
 
 export default function CartWidget() {
   const { cartTotalProducts } = useContext(myContext)
   return (
     <div>
         {/* Se llama a function de CartContext que muestra el total de productos en carrito */}
-        <HiOutlineShoppingCart size={50} className="carrito"/><span>{ cartTotalProducts() }</span>
+        <RiShoppingCartLine size={30} className="carrito"/><span>{ cartTotalProducts() }</span>
     </div>
   )
 }
