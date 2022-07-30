@@ -5,7 +5,8 @@
 }
 
 .linksCategory{
-    display: flex;
+    grid-area: linksCategory;
+    margin: 0px;
 }
 
 .linksCategory li{
@@ -13,4 +14,18 @@
     list-style-type: none;
     font-family: 'Anek Latin', sans-serif;
     font-size: 14px;
+}
+
+.PruebaGrid{
+    display: grid;
+    grid-template-areas: 
+    'linksCategory pruebaFlex';
+    grid-template-columns: 1fr 11fr;
+    
+}
+
+.pruebaFlex{
+    display: flex;
+    justify-content:center;
+    grid-area: pruebaFlex;
 }

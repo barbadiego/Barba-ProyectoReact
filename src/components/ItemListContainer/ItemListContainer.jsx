@@ -23,7 +23,7 @@ export default function ItemListContainer() {
     if (!categoryFilter){
       const collectionRef = new Promise((res, rej)=>{
         setTimeout(() =>{res(getDocs(completeCollection))}
-        , 2000)
+        , 0)
       })
 
       collectionRef
@@ -40,7 +40,7 @@ export default function ItemListContainer() {
     } else {
       const collectionFilt = query(completeCollection, where('category', '==', categoryFilter));
           let filteredArray = new Promise((res, rej)=>{
-            setTimeout(()=>{res(getDocs(collectionFilt))}, 2000)
+            setTimeout(()=>{res(getDocs(collectionFilt))}, 0)
           })
         
           filteredArray.then((res)=> {
@@ -59,18 +59,22 @@ export default function ItemListContainer() {
     
   return (
     <>
+    <div className="PruebaGrid">
       <ul className="linksCategory">
-        <li><Link to={"/category/terror"}>Terror</Link></li>
-        <li><Link to={"/category/fantasia"}>Fantasia</Link></li>
-        <li><Link to={"/category/ficcion"}>Ficción</Link></li>
-        <li><Link to={"/category/deportes"}>Deportes</Link></li>
-        <li><Link to={"/category/ciencia"}>Ciencia</Link></li>
-      </ul>
-      <div>
-        {loading && "Cargando listado de libros"}{" "}
-        {error && "Error al cargar listado. Por favor, recargar página."}{" "}
-        {productos && <ItemList productos={productos} />}
-      </div>
+          <p>Categorías:</p>
+          <li><Link to={"/category/terror"}>Terror</Link></li>
+          <li><Link to={"/category/fantasia"}>Fantasia</Link></li>
+          <li><Link to={"/category/ficcion"}>Ficción</Link></li>
+          <li><Link to={"/category/deportes"}>Deportes</Link></li>
+          <li><Link to={"/category/ciencia"}>Ciencia</Link></li>
+        </ul>
+        <div className="pruebaFlex">
+          {loading && "Cargando listado de libros"}{" "}
+          {error && "Error al cargar listado. Por favor, recargar página."}{" "}
+          {productos && <ItemList productos={productos} />}
+        </div>
+    </div>
+
     </>
   );
 }
