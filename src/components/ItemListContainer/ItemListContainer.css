@@ -7,6 +7,7 @@
 .linksCategory{
     grid-area: linksCategory;
     margin: 0px;
+    border-right: double 4px black;
 }
 
 .linksCategory li{
