@@ -27,17 +27,28 @@ export default function Checkout() {
         addDoc(ordersCollection, order).then(({id}) => setBuyID(id))
      }
 
-
-  return (
-    <>
-        <div className="styleFontCheckout">
+     if (buyId === ""){
+      return(
+        <>
+                <div className="styleFontCheckout">
           <p style={{margin: "0px"}}>Por favor, completar los datos del formulario para crear la orden:</p>
           <div className="prueba3">
+            <p className="textCheckout">Nombre y apellido:</p>
             <input className="inputprueba" onChange={(e) => setName(e.target.value)} type={"text"} placeholder={"Ingresar nombre"}></input>
+            <p className="textCheckout">Teléfono/Celular:</p>
             <input className="inputprueba" onChange={(e) => setTel(e.target.value)} type={"tel"} placeholder={"Ingresar teléfono"}></input>
+            <p className="textCheckout">Dirección de correo:</p>
             <input className="inputprueba" onChange={(e) => setEmail(e.target.value)} type={"email"} placeholder={"Ingresar email"}></input>
             <button onClick={handleClickBuy} className="styleButtonCheckout">Confirmar pedido</button>
           </div>
+
+        </div>
+        </>
+      )
+     }
+  return (
+    <>
+        <div className="styleFontCheckout">
           {buyId === "" ? "" : <p style={{margin: "0px", marginTop: "5px"}}>Su ID de pedido es: {buyId}</p>}
         </div>
     </>

@@ -1,5 +1,15 @@
+/* Estilo de carrito cuando no hay productos agregados. */
+.styleCartWithoutItems{
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    padding: 3%;
+    font-size: 1.2rem;
+}
+
+/* Estilo de carrito cuando hay productos agregados. */
 .boxCart{
-    margin: 50px 100px;
+    margin: 3% 20%;
     /* background-color: #dcd4f8; */
     background-image: radial-gradient(ellipse at left bottom, #baabf1, #dcd4f8, #baabf1);
     border-radius: 50px;
@@ -7,46 +17,70 @@
     font-family: 'Anek Latin', sans-serif;
 }
 
+
+.opruebaoo{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+.buttonClearCart{
+    margin-left: auto;
+    order: 2;
+    padding: 4px;
+    cursor: pointer;
+    /* border: solid 2px; */
+    /* background-color: black; */
+    grid-area: buttonClearCart;
+    background-color: #beaed3;
+    border: solid 1px;
+    border-radius: 25px;
+    font-family: 'Anek Latin', sans-serif;
+    margin-top: 5px;
+}
+
+.buttonClearCart:hover{
+    border: solid 1px black;
+    background-color: #957897;
+    color: white;
+}
+
 .container-fluid{
     display: grid;
     grid-template-areas: 
     'columnBookCover columnAuthor columnTitle columnQuantity columnPriceItemsCart';
-    grid-template-columns: 3fr 3fr 3fr 2fr 2.5fr 0.5fr;
-    font-size: 150%;
+    grid-template-columns: 2fr 3fr 4fr 2fr 2.5fr 0.5fr;
+    font-size: 100%;
     font-weight: 600;
-    border-bottom: solid 2px;
-    
+    border-bottom: solid 3px;
 }
 
 .totalPriceStyleText{
-    font-size: 35px;
+
+    margin-left: auto;
+    order: 2;
+    display: inline-block;
+    padding: 0px 5px 5px 0px;
+    font-size: 1.5rem;
     font-style: italic;
-    font-weight: 500;
+    font-weight: 600;
     color: rgb(88, 61, 124);
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }
 
 .buttonCart{
-    border: none;
-    color: black;
-    background-color: #beaed3;
-    padding: 5px 5px;
-    text-align: center;
-    text-decoration: none;
+    height: 25px;
+    width: 25px;
     display: inline-block;
-    font-size: 12px;
-    border-radius: 50%;
-    height: 30px;
-    width: 30px;
     grid-area: buttonCart;
     align-self: center;
     justify-self: center;
-    border: solid 1px black;
+    cursor: pointer;
 }
 
 .buttonCart:hover{
-    background-color: #957897;
-    color: white;
+    /* background-color: #957897; */
+    color: #4f2d7c;
+    cursor: pointer;
 }
 
 .buttonForm{
@@ -70,9 +104,10 @@
     display: grid;
     grid-template-areas: 
     'bookCoverCart authorCart titleCart quantityCart priceItemsCart buttonCart';
-    grid-template-columns: 3fr 3fr 3fr 2fr 2.5fr 0.5fr;
-    border-top: solid 2px;
-    font-size: 20px;
+    grid-template-columns: 2fr 3fr 4fr 2fr 2.5fr 0.5fr;
+    /* border-top: solid 1px; */
+    border-bottom: solid 2px;
+    font-size: 1.1rem;
     font-style: italic;
 }
 
@@ -81,7 +116,8 @@
     justify-self: center;
 }
 .bookCoverCart{
-    height:200px;
+    margin: 5px 0px;
+    height: 15vh;
     grid-area: bookCoverCart;
     align-self: center;
     justify-self: center;
@@ -96,7 +132,6 @@
     align-self: center;
     justify-self: center;
     font-weight: 600;
-    font-size: 24px;
 }
 
 .columnTitle{
@@ -108,7 +143,6 @@
     align-self: center;
     justify-self: center;
     font-weight: 400;
-    font-size: 22px;
 }
 
 .columnQuantity{
