@@ -1,9 +1,8 @@
 import React, { useContext } from 'react';
+import { FaTrash } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { myContext } from '../CartContext';
-import Checkout from '../Checkout/Checkout';
 import './Cart.css';
-import { FaTrash } from 'react-icons/fa';
 
 export default function Cart() {
     const { cart, clear, removeItem, totalPrice } = useContext(myContext)
@@ -62,8 +61,8 @@ export default function Cart() {
             
         </div>
     </div>
+    <Link to={"/checkout"} className="buttonCloseOrder">Finalizar pedido</Link>
     {/* < Checkout /> */}
-    <Link to={"/checkout"}><p>FINALIZAR PEDIDO</p></Link>
     </>
   )
 }

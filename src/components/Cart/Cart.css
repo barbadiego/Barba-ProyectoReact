@@ -164,3 +164,23 @@
     align-self: center;
     justify-self: center;
 }
+
+.buttonCloseOrder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 150px;
+    height: 50px;
+    background-color: #beaed3;
+    border-radius: 25px;
+    font-family: 'Anek Latin', sans-serif;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.buttonCloseOrder:hover{
+    background-color: #957897;
+    color: white;
+    font-weight: 600;
+}
