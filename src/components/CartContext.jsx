@@ -1,11 +1,14 @@
 import React from 'react'
-import { createContext, useState } from 'react';
+import { createContext, useState, useEffect } from 'react';
 
 export const myContext = createContext();
 
 export default function CartContext( { children } ) {
-    const [cart, setCart] = useState([]);
-    const [totPrice, setTotPrice] = useState()
+    const [cart, setCart] = useState(JSON.parse(localStorage.getItem("cart")) || []);
+
+    useEffect(() => {
+        localStorage.setItem("cart", JSON.stringify(cart))
+    }, [cart])
 
     // Valida si ya existe producto id en carrito.
     const isInCart = (id) => {
@@ -56,7 +59,7 @@ export default function CartContext( { children } ) {
 
   return (
     <div>
-        <myContext.Provider value={{ addItem, removeItem, clear, setCart, cart, totalPrice, totPrice, cartTotalProducts }}>
+        <myContext.Provider value={{ addItem, removeItem, clear, setCart, cart, totalPrice, cartTotalProducts }}>
             {children}
         </myContext.Provider>
     </div>
