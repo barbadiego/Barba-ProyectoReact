@@ -1,40 +1,38 @@
-/* .topNav{
-    margin-top: 10px;
-} */
-
 .style{
     background-color: #4c394e;
     height: 140px;
 }
 
 .styleFontLogo{
-    font-size: 40px;
     color: white;
     font-family: 'Anek Latin', sans-serif;
-    display: flex;
+    display: grid;
+    grid-template-areas: 
+    'styleLogo pruebilla';
+    grid-template-columns: 4fr 8fr;
 }
 
 .styleFontLogo p{
     margin: -20px;
 }
 
-/* .styleLogo{
-    padding: 5px 0px;
-    height: 100px;
-} */
-
-/* .pruebilla{
-    padding: 200px;
-} */
-.formatContent{
-    display: flex;
-    justify-content: space-between;
+.styleLogo{
+    grid-area: styleLogo;
 }
 
-.prueba2{
+.styleWebTitle{
+    grid-area: pruebilla;
+    align-self: center;
+    font-size: 5rem;
+    font-weight: 600;
+    text-shadow: 5px 5px 5px rgb(40, 19, 46);
+}
+
+.barLinks{
     height: 40px;
     background-color: #04052e;
 }
+
 .linkPages{
     color: white;
     display: flex;
@@ -53,8 +51,4 @@
 .linkPages a:hover{
     text-decoration: underline;
     color: rgb(190, 109, 190);
-}
-
-
-.cartStyle{
 }
