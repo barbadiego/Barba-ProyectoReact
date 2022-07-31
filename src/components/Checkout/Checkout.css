@@ -12,7 +12,7 @@
     font-family: 'Anek Latin', sans-serif;
 }
 
-.prueba3{
+.styleForm{
     display: grid;
     justify-content: center;
     justify-items: center;
@@ -23,7 +23,7 @@
     margin: 10px 0px 0px 0px;
 }
 
-.inputprueba{
+.styleInput{
     width: 140%;
     margin: 5px 10px;
     padding: 10px;
@@ -31,7 +31,6 @@
     border: solid 1px;
     border-radius: 5px;
 }
-
 
 .styleButtonCheckout{
     font-family: 'Anek Latin', sans-serif;

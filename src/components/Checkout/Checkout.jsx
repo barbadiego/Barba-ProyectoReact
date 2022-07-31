@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
 import { addDoc, collection, getFirestore } from 'firebase/firestore'
-import { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { myContext } from '../CartContext'
 import './Checkout.css'
 
@@ -10,10 +9,11 @@ export default function Checkout() {
     const [email, setEmail] = useState("")
     const [buyId, setBuyID] = useState("")
 
+    
     const { cart, totalPrice } = useContext(myContext)
 
         
-     function handleClickBuy(){
+    function handleClickBuy(){
         const order = 
         { buyer: { name: name, tel: tel, email: email },
         items: [...cart],
@@ -27,19 +27,30 @@ export default function Checkout() {
         addDoc(ordersCollection, order).then(({id}) => setBuyID(id))
      }
 
+    function validateInputs(){
+        if (name.length < 3) return alert("Nombre incorrecto") 
+        if (tel.length < 8) return alert("Tel incorrecto")
+        if (!email.includes('@')) return alert("Email incorrecto")
+      handleClickBuy()
+     }
+
+
      if (buyId === ""){
       return (
         <>
           <div className="styleFontCheckout">
             <p style={{margin: "0px"}}>Por favor, completar los datos del formulario para crear la orden:</p>
-            <div className="prueba3">
+            <p style={{margin: "5px"}}>Si no se completan los datos correctamente no se podrá avanzar.</p>
+            <div className="styleForm">
               <p className="textCheckout">Nombre y apellido:</p>
-              <input className="inputprueba" onChange={(e) => setName(e.target.value)} type={"text"} placeholder={"Ingresar nombre"}></input>
+              <input className="styleInput" onChange={(e) => setName(e.target.value)} type={"text"} placeholder={"Ingresar nombre. (Min: 3 letras)"}></input>
+
               <p className="textCheckout">Teléfono/Celular:</p>
-              <input className="inputprueba" onChange={(e) => setTel(e.target.value)} type={"tel"} placeholder={"Ingresar teléfono"}></input>
+              <input className="styleInput" onChange={(e) => setTel(e.target.value)} type={"tel"} placeholder={"Ingresar teléfono. (Mín: 8 números)"}></input>
+
               <p className="textCheckout">Dirección de correo:</p>
-              <input className="inputprueba" onChange={(e) => setEmail(e.target.value)} type={"email"} placeholder={"Ingresar email"}></input>
-              <button onClick={handleClickBuy} className="styleButtonCheckout">Confirmar pedido</button>
+              <input className="styleInput" onChange={(e) => setEmail(e.target.value)} type={"email"} placeholder={"Ingresar email. Ej: example@example.com"}></input>
+              <button onClick={validateInputs} className="styleButtonCheckout">Confirmar pedido</button>
             </div>
           </div>
         </>
