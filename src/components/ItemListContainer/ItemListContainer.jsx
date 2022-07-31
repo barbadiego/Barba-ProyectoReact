@@ -59,16 +59,22 @@ export default function ItemListContainer() {
     
   return (
     <>
-    <div className="PruebaGrid">
+    <div className="styleMainWeb">
       <ul className="linksCategory">
           <p>Categorías:</p>
-          <li><Link to={"/category/terror"}>Terror</Link></li>
+          <li><Link to={"/category/arte"}>Arte</Link></li>
+          <li><Link to={"/category/ciencia"}>Ciencia</Link></li>
+          <li><Link to={"/category/computacion"}>Computación</Link></li>
+          <li><Link to={"/category/deportes"}>Deportes</Link></li>
+          <li><Link to={"/category/derecho"}>Derecho</Link></li>
           <li><Link to={"/category/fantasia"}>Fantasia</Link></li>
           <li><Link to={"/category/ficcion"}>Ficción</Link></li>
-          <li><Link to={"/category/deportes"}>Deportes</Link></li>
-          <li><Link to={"/category/ciencia"}>Ciencia</Link></li>
+          <li><Link to={"/category/gastronomia"}>Gastronomía</Link></li>
+          <li><Link to={"/category/infantil"}>Infantil</Link></li>
+          <li><Link to={"/category/terror"}>Terror</Link></li>
+          <li><Link to={"/category/turismo"}>Turismo</Link></li>
         </ul>
-        <div className="pruebaFlex">
+        <div className="styleMainBooks">
           {loading && "Cargando listado de libros"}{" "}
           {error && "Error al cargar listado. Por favor, recargar página."}{" "}
           {productos && <ItemList productos={productos} />}

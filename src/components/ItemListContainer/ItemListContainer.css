@@ -1,31 +1,33 @@
-.styleBody{
+.styleMainWeb{
     display: grid;
-    place-content: center;
-    font-size: 40px;
+    grid-template-areas: 
+    'linksCategory pruebaFlex';
+    grid-template-columns: 1fr 11fr;
 }
 
 .linksCategory{
     grid-area: linksCategory;
     margin: 0px;
     border-right: double 4px black;
+    font-family: 'Anek Latin', sans-serif;
 }
 
 .linksCategory li{
     margin: 0px 15px;
-    list-style-type: none;
-    font-family: 'Anek Latin', sans-serif;
+    list-style-type: disc;
     font-size: 14px;
 }
 
-.PruebaGrid{
-    display: grid;
-    grid-template-areas: 
-    'linksCategory pruebaFlex';
-    grid-template-columns: 1fr 11fr;
-    
+.linksCategory li:hover{
+    text-decoration: none;
+    color:red;
 }
 
-.pruebaFlex{
+linksCategory Link:hover{
+    color:blue;
+}
+
+.styleMainBooks{
     display: flex;
     justify-content:center;
     grid-area: pruebaFlex;
