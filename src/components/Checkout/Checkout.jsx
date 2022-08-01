@@ -2,7 +2,7 @@ import { addDoc, collection, getFirestore } from 'firebase/firestore'
 import React, { useContext, useState } from 'react'
 import { myContext } from '../CartContext'
 import './Checkout.css'
-import swal from 'sweetalert';
+import Swal from 'sweetalert2'
 
 export default function Checkout() {
     const [name, setName] = useState("")
@@ -34,13 +34,13 @@ export default function Checkout() {
         let emailReject = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/
 
         if (!nameReject.test(name) || !telReject.test(tel) || !emailReject.test(email)){
-          swal("Error en formulario", "Por favor, verificar si los datos fueron escritos correctamente.")
+          Swal.fire({icon: 'warning',
+          title: 'Error en formulario',
+          text: 'Por favor, verificar si los datos fueron escritos correctamente.',
+          confirmButtonText: 'Ok'})
         } else {
           handleClickBuy()
         }
-        // if (name.length < 3) return swal("El campo nombre se encuentra vacío o posee pocos caracteres. Por favor, completar.") 
-        // if (tel.length < 8) return swal("El campo teléfono se encuentra vacío o menos de 8 dígitos. Por favor, completar.")
-        // if (!email.includes('@')) return swal("El mail indicado no posee '@'. Por favor, agregar el mail en formato correcto.")
      }
 
 
