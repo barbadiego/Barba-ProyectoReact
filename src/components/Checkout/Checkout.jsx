@@ -48,7 +48,7 @@ export default function Checkout() {
      if (buyId === ""){
       return (
         <>
-          <div className="styleFontCheckout">
+          <main className="styleFontCheckout">
             <p style={{margin: "0px"}}>Por favor, completar los datos del formulario para crear la orden:</p>
             <p style={{margin: "5px"}}>Si no se completan los datos correctamente no se podrá avanzar.</p>
             <div className="styleForm">
@@ -62,16 +62,16 @@ export default function Checkout() {
               <input className="styleInput" onChange={(e) => setEmail(e.target.value)} type={"email"} value={email} placeholder={"Ej: example@example.com"}></input>
               <button onClick={validateInputs} className="styleButtonCheckout">Confirmar pedido</button>
             </div>
-          </div>
+          </main>
         </>
       )
       }
 
   return (
         <>
-            <div className="styleFontCheckout">
+            <main className="styleFontCheckout">
               {buyId === "" ? "" : <p style={{margin: "0px", marginTop: "5px"}}>Su ID de pedido es: {buyId}</p>}
-            </div>
+            </main>
         </>
       )
 }

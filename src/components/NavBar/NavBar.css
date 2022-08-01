@@ -10,7 +10,7 @@
     font-family: 'Anek Latin', sans-serif;
     display: grid;
     grid-template-areas: 
-    'styleLogo pruebilla';
+    'styleLogo styleWebTitle';
     grid-template-columns: 4fr 8fr;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .styleWebTitle{
-    grid-area: pruebilla;
+    grid-area: styleWebTitle;
     align-self: center;
     font-size: 5rem;
     font-weight: 600;

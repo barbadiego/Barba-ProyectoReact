@@ -14,7 +14,6 @@ function App() {
 
   return (
     <CartContext>
-      <div>
         <BrowserRouter>
           <NavBar />
           <Routes>
@@ -26,7 +25,6 @@ function App() {
           </Routes>
           <Footer />
         </BrowserRouter>
-      </div>
     </CartContext>
   );
 }

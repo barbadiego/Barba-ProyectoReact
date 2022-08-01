@@ -59,7 +59,7 @@ export default function ItemListContainer() {
     
   return (
     <>
-    <div className="styleMainWeb">
+    <main className="styleMainWeb">
       <ul className="linksCategory">
           <p>Categorías:</p>
           <li><Link to={"/category/arte"}>Arte</Link></li>
@@ -79,7 +79,7 @@ export default function ItemListContainer() {
           {error && "Error al cargar listado. Por favor, recargar página."}{" "}
           {productos && <ItemList productos={productos} />}
         </div>
-    </div>
+    </main>
 
     </>
   );

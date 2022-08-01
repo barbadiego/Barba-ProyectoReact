@@ -11,7 +11,7 @@ export default function Cart() {
     if(cart.length === 0){
       return (
       <>
-        <div className="boxCart">
+        <main className="boxCart">
           <div className="container-fluid">
                   <p className="columnBookCover">Portada</p>
                   <p className="columnAuthor">Autor</p>
@@ -24,7 +24,7 @@ export default function Cart() {
             <div>No hay libros agregados en el carrito.</div>
             <Link to={"/"}>Visitar Main page para ver los productos.</Link>
           </div>
-        </div>
+        </main>
       </>)
     }
     // Desglose de carrito
@@ -33,7 +33,7 @@ export default function Cart() {
     {/* <Link to={"/checkout"}><button className="buttonForm">Llenar formulario para completar pedido.</button></Link> */}
     {/* <button onClick={() => clear()} className="buttonCart">Vaciar carrito</button> */}
     {/* <div className="totalPriceStyleText">Monto total: ${totalPrice()}</div> */}
-      <div className="boxCart">
+      <main className="boxCart">
           <div className="container-fluid">
                   <p className="columnBookCover">Portada</p>
                   <p className="columnAuthor">Autor</p>
@@ -60,7 +60,7 @@ export default function Cart() {
               </div>
               
           </div>
-      </div>
+      </main>
       <Link to={"/checkout"} className="buttonCloseOrder">Finalizar pedido</Link>
     </>
   )

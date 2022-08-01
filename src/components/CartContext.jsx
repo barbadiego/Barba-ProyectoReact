@@ -58,10 +58,10 @@ export default function CartContext( { children } ) {
 
 
   return (
-    <div>
+    <>
         <myContext.Provider value={{ addItem, removeItem, clear, setCart, cart, totalPrice, cartTotalProducts }}>
             {children}
         </myContext.Provider>
-    </div>
+    </>
   )
 }
