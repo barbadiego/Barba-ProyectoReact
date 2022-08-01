@@ -46,7 +46,6 @@ export default function ItemListContainer() {
           filteredArray.then((res)=> {
             const collectionFiltered = res.docs.map((element)=>({...element.data(), id: element.id}));
             setProductos(collectionFiltered);
-            console.log(collectionFiltered)
           })
           .catch((error)=>{
             setError(true);

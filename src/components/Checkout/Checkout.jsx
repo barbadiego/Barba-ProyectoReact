@@ -21,7 +21,6 @@ export default function Checkout() {
         date: Date(),
         price: totalPrice(),
     }
-        console.log(order)
         const db = getFirestore();
         const ordersCollection = collection(db, 'orders')
 
