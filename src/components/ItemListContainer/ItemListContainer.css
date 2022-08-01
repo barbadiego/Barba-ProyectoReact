@@ -3,6 +3,7 @@
     grid-template-areas: 
     'linksCategory pruebaFlex';
     grid-template-columns: 1fr 11fr;
+    background-image: url("https://i.ibb.co/XXHkR53/navbar.png");
 }
 
 .linksCategory{

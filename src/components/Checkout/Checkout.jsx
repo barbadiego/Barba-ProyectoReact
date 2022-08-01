@@ -11,7 +11,7 @@ export default function Checkout() {
     const [buyId, setBuyID] = useState("")
 
     
-    const { cart, totalPrice } = useContext(myContext)
+    const { cart, totalPrice, clear } = useContext(myContext)
 
         
     function handleClickBuy(){
@@ -26,6 +26,7 @@ export default function Checkout() {
         const ordersCollection = collection(db, 'orders')
 
         addDoc(ordersCollection, order).then(({id}) => setBuyID(id))
+        clear();
      }
 
     function validateInputs(){
