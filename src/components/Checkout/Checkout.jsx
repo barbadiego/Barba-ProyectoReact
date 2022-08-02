@@ -34,7 +34,7 @@ export default function Checkout() {
         let telRegex = /^[0-9]/gm
         let emailRegex = /^[^@\s]+@[^@\s]+\.[^@\s]+$/
 
-        if (!nameRegex.test(name) || !telRegex.test(tel) || !emailRegex.test(email)){
+        if ((!nameRegex.test(name) || name.length < 3) || (!telRegex.test(tel) || tel.length < 8) || !emailRegex.test(email)){
           Swal.fire({icon: 'warning',
           title: 'Error en formulario',
           text: 'Por favor, verificar si los datos fueron escritos correctamente.',
@@ -52,14 +52,14 @@ export default function Checkout() {
             <p style={{margin: "0px"}}>Por favor, completar los datos del formulario para crear la orden:</p>
             <p style={{margintop: "5px"}}>Si no se completan los datos correctamente no se podrá avanzar.</p>
             <div className="styleForm">
-              <p className="textCheckout">Nombre y apellido:</p>
-              <input className="styleInput" onChange={(e) => setName(e.target.value)} type={"text"} value={name} placeholder={"Solo letras. (Min: 3 letras)"}></input>
+              <label className="textCheckout" htmlFor='name'>Nombre y apellido:</label>
+              <input className="styleInput" id={"name"} onChange={(e) => setName(e.target.value)} type={"text"} value={name} placeholder={"Solo letras. (Min: 3 letras)"}></input>
 
-              <p className="textCheckout">Teléfono/Celular:</p>
-              <input className="styleInput" onChange={(e) => setTel(e.target.value)} type={"tel"} value={tel} placeholder={"Solo números. (Mín: 8 números)"}></input>
+              <label className="textCheckout" htmlFor='tel'>Teléfono/Celular:</label>
+              <input className="styleInput" id={"tel"} onChange={(e) => setTel(e.target.value)} type={"tel"} value={tel} placeholder={"Solo números. (Mín: 8 números)"}></input>
 
-              <p className="textCheckout">Dirección de correo:</p>
-              <input className="styleInput" onChange={(e) => setEmail(e.target.value)} type={"email"} value={email} placeholder={"Ej: example@example.com"}></input>
+              <label className="textCheckout" htmlFor='email'>Dirección de correo:</label>
+              <input className="styleInput" id={"email"} onChange={(e) => setEmail(e.target.value)} type={"email"} value={email} placeholder={"Ej: example@example.com"}></input>
               <button onClick={validateInputs} className="styleButtonCheckout">Confirmar pedido</button>
             </div>
           </main>

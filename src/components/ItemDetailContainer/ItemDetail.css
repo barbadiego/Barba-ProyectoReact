@@ -123,7 +123,7 @@
         'cartButton'
         'descriptionDetail';
         grid-template-columns: 12fr;
-        grid-template-rows: 500px 35px 30px 20px 20px 120px 100%;
+        grid-template-rows: auto 35px 30px 20px 20px 120px auto;
         margin-left: 0%;
         margin-right: 0%;
         margin-top: 2%;
