@@ -25,7 +25,7 @@ export default function ButtonAppBar() {
         <div className="barLinks">
           <div className="linkPages">
               <Link to={"/"}>Inicio</Link>
-              <Link to={"/"}>Productos</Link>
+              <Link to={"/"}>Productoss</Link>
             <div className="cartStyle">
               {/* If ternario, si no hay productos agregados no muestra el logo de carrito */}
               <Link to={`/cart`}><CartWidget /></Link>

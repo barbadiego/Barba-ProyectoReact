@@ -19,6 +19,10 @@ La misma es responsive para funcionar en distintas resolución y dispositivos m�
 - **Firebase:** La base de datos de los productos se encuentra cargada en Firebase.
 - **SweetAlert2:** PopUp de alerta en caso de que los datos ingresados sean erróneos.
 
+# _Deploy:_
+Ingresar al link: 
+- https://barba-ecommerceproject.web.app
+
 # _Ejecución:_
 Ingresar a terminal y clonar el repositorio:
 ``` 

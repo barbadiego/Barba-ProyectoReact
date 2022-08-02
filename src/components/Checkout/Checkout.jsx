@@ -30,15 +30,15 @@ export default function Checkout() {
      }
 
     function validateInputs(){
-        let nameReject = /^[a-zA-ZÀ-ÿ\s]{1,40}$/
-        let telReject = /^[0-9]/gm
-        let emailReject = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/
+        let nameRegex = /^[a-zA-ZÀ-ÿ\s]{1,40}$/
+        let telRegex = /^[0-9]/gm
+        let emailRegex = /^[^@\s]+@[^@\s]+\.[^@\s]+$/
 
-        if (!nameReject.test(name) || !telReject.test(tel) || !emailReject.test(email)){
+        if (!nameRegex.test(name) || !telRegex.test(tel) || !emailRegex.test(email)){
           Swal.fire({icon: 'warning',
           title: 'Error en formulario',
           text: 'Por favor, verificar si los datos fueron escritos correctamente.',
-          confirmButtonText: 'Ok'})
+          confirmButtonText: 'Ok.'})
         } else {
           handleClickBuy()
         }

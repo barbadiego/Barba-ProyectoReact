@@ -22,7 +22,7 @@ export default function Cart() {
           </div>
           <div className="styleCartWithoutItems">
             <div>No hay libros agregados en el carrito.</div>
-            <Link to={"/"} className="styleLinkCartWithoutItems">Visitar Main page para ver los productos.</Link>
+            <Link to={"/"} className="styleLinkCartWithoutItems">Visitar  página principal para ver los productos.</Link>
           </div>
         </div>
       </>)
