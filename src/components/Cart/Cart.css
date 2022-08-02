@@ -10,26 +10,23 @@
 /* Estilo de carrito cuando hay productos agregados. */
 .boxCart{
     margin: 3% 20%;
-    /* background-color: #dcd4f8; */
     background-image: radial-gradient(ellipse at left bottom, #baabf1, #dcd4f8, #baabf1);
     border-radius: 50px;
     padding: 0px 25px;
     font-family: 'Anek Latin', sans-serif;
 }
 
-
-.opruebaoo{
+.formatButtonClearCart{
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
 }
+
 .buttonClearCart{
     margin-left: auto;
     order: 2;
     padding: 4px;
     cursor: pointer;
-    /* border: solid 2px; */
-    /* background-color: black; */
     grid-area: buttonClearCart;
     background-color: #beaed3;
     border: solid 1px;
@@ -55,7 +52,6 @@
 }
 
 .totalPriceStyleText{
-
     margin-left: auto;
     order: 2;
     display: inline-block;
@@ -64,7 +60,6 @@
     font-style: italic;
     font-weight: 600;
     color: rgb(88, 61, 124);
-    /* text-decoration: underline; */
 }
 
 .buttonCart{
@@ -78,7 +73,6 @@
 }
 
 .buttonCart:hover{
-    /* background-color: #957897; */
     color: #4f2d7c;
     cursor: pointer;
 }
@@ -105,7 +99,6 @@
     grid-template-areas: 
     'bookCoverCart authorCart titleCart quantityCart priceItemsCart buttonCart';
     grid-template-columns: 2fr 3fr 4fr 2fr 2.5fr 0.5fr;
-    /* border-top: solid 1px; */
     border-bottom: solid 2px;
     font-size: 1.1rem;
     font-style: italic;

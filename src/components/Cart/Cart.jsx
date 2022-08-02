@@ -1,3 +1,4 @@
+//@ts-check
 import React, { useContext } from 'react';
 import { FaTrash } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
@@ -11,28 +12,24 @@ export default function Cart() {
     if(cart.length === 0){
       return (
       <>
-        <main className="boxCart">
+        <div className="boxCart">
           <div className="container-fluid">
                   <p className="columnBookCover">Portada</p>
                   <p className="columnAuthor">Autor</p>
                   <p className="columnTitle">Título</p>
                   <p className="columnQuantity">Cantidad</p>
                   <p className="columnPriceItemsCart">Monto</p>
-                  {/* <div><button onClick={() => clear()} className="buttonClearCart">Vaciar carrito</button></div> */}
           </div>
           <div className="styleCartWithoutItems">
             <div>No hay libros agregados en el carrito.</div>
             <Link to={"/"}>Visitar Main page para ver los productos.</Link>
           </div>
-        </main>
+        </div>
       </>)
     }
     // Desglose de carrito
   return (
     <>
-    {/* <Link to={"/checkout"}><button className="buttonForm">Llenar formulario para completar pedido.</button></Link> */}
-    {/* <button onClick={() => clear()} className="buttonCart">Vaciar carrito</button> */}
-    {/* <div className="totalPriceStyleText">Monto total: ${totalPrice()}</div> */}
       <main className="boxCart">
           <div className="container-fluid">
                   <p className="columnBookCover">Portada</p>
@@ -40,7 +37,6 @@ export default function Cart() {
                   <p className="columnTitle">Título</p>
                   <p className="columnQuantity">Cantidad</p>
                   <p className="columnPriceItemsCart">Monto</p>
-                  {/* <div><button onClick={() => clear()} className="buttonClearCart">Vaciar carrito</button></div> */}
           </div>
           <div >
               {cart.map((producto) => (
@@ -50,11 +46,10 @@ export default function Cart() {
                     <p className="titleCart">{producto.item.title}</p>
                     <p className="quantityCart">{producto.quantity}</p>
                     <p className="priceItemsCart">${producto.item.price * producto.quantity}</p>
-                    {/* <button onClick={()=>{removeItem(producto.item.id)}} className="buttonCart"><FaTrash /></button> */}
                     <FaTrash onClick={()=>{removeItem(producto.item.id)}} className="buttonCart"/>
                   </div>
               ))}
-              <div className="opruebaoo">
+              <div className="formatButtonClearCart">
                 <div onClick={() => clear()} className="buttonClearCart">Vaciar carrito</div>
                 <div className="totalPriceStyleText">Monto total: ${totalPrice()}</div>
               </div>
