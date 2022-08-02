@@ -1,8 +1,9 @@
 import { addDoc, collection, getFirestore } from 'firebase/firestore'
 import React, { useContext, useState } from 'react'
+import { Link } from 'react-router-dom'
+import Swal from 'sweetalert2'
 import { myContext } from '../CartContext'
 import './Checkout.css'
-import Swal from 'sweetalert2'
 
 export default function Checkout() {
     const [name, setName] = useState("")
@@ -49,7 +50,7 @@ export default function Checkout() {
         <>
           <main className="styleFontCheckout">
             <p style={{margin: "0px"}}>Por favor, completar los datos del formulario para crear la orden:</p>
-            <p style={{margin: "5px"}}>Si no se completan los datos correctamente no se podrá avanzar.</p>
+            <p style={{margintop: "5px"}}>Si no se completan los datos correctamente no se podrá avanzar.</p>
             <div className="styleForm">
               <p className="textCheckout">Nombre y apellido:</p>
               <input className="styleInput" onChange={(e) => setName(e.target.value)} type={"text"} value={name} placeholder={"Solo letras. (Min: 3 letras)"}></input>
@@ -68,8 +69,9 @@ export default function Checkout() {
 
   return (
         <>
-            <main className="styleFontCheckout">
-              {buyId === "" ? "" : <p style={{margin: "0px", marginTop: "5px"}}>Su ID de pedido es: {buyId}</p>}
+            <main>
+              {buyId === "" ? "" : <div className="styleFontCheckout2"><p style={{margin: "0px", marginTop: "5px"}}>Su ID de pedido es:</p> <p>{buyId}</p></div>}
+              <Link to='/' className="returnMain">Volver a página principal</Link>
             </main>
         </>
       )

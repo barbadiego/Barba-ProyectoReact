@@ -1,8 +1,8 @@
 // @ts-check
 import React, { useState } from "react";
-import Button from "./Button";
 import { Link } from 'react-router-dom';
-import './Button.css'
+import Button from "./Button";
+import './Button.css';
 
 export default function ItemCount({ stock, onAdd }) {
   const [auxInitial, setAuxInitial] = useState(1);
@@ -29,7 +29,7 @@ export default function ItemCount({ stock, onAdd }) {
         <div onClick={() => setShowButton(!showButton)}><button onClick={() => onAdd(auxInitial)} disabled={stock < 1 ? true : false} className="addCartButton">Agregar al carrito</button></div>
       </>
        : 
-       <button className="addCartButton"><Link to={"/cart"}>Terminar compra</Link></button>
+       <Link to={"/cart"}><button className="addCartButton">Terminar compra</button></Link>
       }
     </div>
   );

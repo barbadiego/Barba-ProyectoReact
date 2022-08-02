@@ -37,7 +37,7 @@ export default function ItemDetailContainer() {
 
     return (
         <>
-            {loading ? <div>Cargando libro.</div> : <ItemDetail item={item} />}
+            {loading ? <div className="waitingStyle">Cargando libro.</div> : <ItemDetail item={item} />}
             {error && "Error al cargar listado. Por favor, recargar página."}
         </>
     )

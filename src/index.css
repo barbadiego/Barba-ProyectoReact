@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(to bottom, #cad9d9, #e8edec);
 }
 
 code {
@@ -12,12 +13,12 @@ code {
     monospace;
 }
 
-/* #root {
+#root {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
-body {
+/* body {
     height: 100vh;
 }
 main {

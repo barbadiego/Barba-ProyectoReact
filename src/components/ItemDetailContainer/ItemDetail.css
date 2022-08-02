@@ -1,3 +1,11 @@
+.waitingStyle{
+    display: flex;
+    justify-content:center;
+    font-size: 1.5rem;
+    font-style: italic;
+    font-family: 'Anek Latin', sans-serif; 
+}
+
 .webStyle{
     display: grid;
     grid-template-areas: 
@@ -12,11 +20,11 @@
     margin-left: 200px;
     margin-top: 50px;
     margin-right: 200px;
-    font-family: 'Anek Latin', sans-serif;
+    font-family: 'Anek Latin', sans-serif;  
 }
 
 .bookCoverDetail{
-    height: 700px;
+    height: 35rem;
     grid-area: bookCoverDetail;
     margin-right: 50px;
     border-top-left-radius: 5%; 
@@ -24,37 +32,169 @@
 }
 
 .titleDetail{
-    font-size: 35px;
+    font-size: 2rem;
     grid-area: titleDetail;
     font-weight: 600;
     text-decoration: underline;
-    color: rgb(109, 62, 122);
+    color: #2f3e46;
 }
 
 .authorDetail{
-    font-size: 25px;
+    font-size: 1.5rem;
     grid-area: authorDetail;
     font-style: italic;
-    color: rgb(109, 74, 119);
+    color: #2f3e46;
 }
 
 .priceDetail{
+    font-size: 1.1rem;
     grid-area: priceDetail;
     font-style:oblique;
-    font-size: 18px;
 }
 
 .stockDetail{
+    font-size: 1.1rem;
     grid-area: stockDetail;
     font-style: italic;
-    font-size: 16px;
 }
 
 .descriptionDetail{
+    font-size: 1.4rem;
     grid-area: descriptionDetail;
-    font-size: 20px;
 }
 
 .cartButton{
     grid-area: cartButton;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 1200px) and (min-width: 761px){
+    .webStyle{
+        display: grid;
+        grid-template-areas: 
+        'bookCoverDetail titleDetail'
+        'bookCoverDetail authorDetail'
+        'bookCoverDetail priceDetail'
+        'bookCoverDetail stockDetail'
+        'bookCoverDetail cartButton'
+        'bookCoverDetail descriptionDetail';
+        grid-template-columns: 3fr 9fr;
+        grid-template-rows: 50px 35px 30px 20px 150px;
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-top: 2%;
+        font-family: 'Anek Latin', sans-serif;
+    }
+
+    .bookCoverDetail{
+        height: 35rem;
+        grid-area: bookCoverDetail;
+        margin-right: 5px;
+        border-top-left-radius: 5%; 
+        border-bottom-right-radius: 5%; 
+    }
+    .titleDetail{
+        font-size: 1.5rem;
+    }
+    .authorDetail{
+        font-size: 1.2rem;
+    }
+    .priceDetail{
+        font-size: 1rem;
+    }
+    .stockDetail{
+        font-size: 1rem;
+    }
+    .descriptionDetail{
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 760px) and (min-width: 321px){
+    .webStyle{
+        display: grid;
+        grid-template-areas: 
+        'bookCoverDetail'
+        'titleDetail'
+        'authorDetail'
+        'priceDetail'
+        'stockDetail'
+        'cartButton'
+        'descriptionDetail';
+        grid-template-columns: 12fr;
+        grid-template-rows: 500px 35px 30px 20px 20px 120px 100%;
+        margin-left: 0%;
+        margin-right: 0%;
+        margin-top: 2%;
+        justify-items: center;
+    }
+    .bookCoverDetail{
+        height: 29rem;
+        grid-area: bookCoverDetail;
+        margin-right: 0%;
+        border-top-left-radius: 5%; 
+        border-bottom-right-radius: 5%; 
+    }
+    .titleDetail{
+        font-size: 1.3rem;
+    }
+    .authorDetail{
+        font-size: 1.2rem;
+    }
+    .priceDetail{
+        font-size: 1rem;
+    }
+    .stockDetail{
+        font-size: 1rem;
+    }
+    .descriptionDetail{
+        font-size: 1rem;
+        grid-area: descriptionDetail;
+        margin: 2%;
+    }
+}
+
+@media only screen and (max-width: 320px){
+    .webStyle{
+        display: grid;
+        grid-template-areas: 
+        'bookCoverDetail'
+        'titleDetail'
+        'authorDetail'
+        'priceDetail'
+        'stockDetail'
+        'cartButton'
+        'descriptionDetail';
+        grid-template-columns: 12fr;
+        grid-template-rows: 250px 35px 30px 20px 20px 120px 100%;
+        margin-left: 0%;
+        margin-right: 0%;
+        margin-top: 2%;
+        justify-items: center;
+    }
+    .bookCoverDetail{
+        height: 15rem;
+        grid-area: bookCoverDetail;
+        margin-right: 0%;
+        border-top-left-radius: 5%; 
+        border-bottom-right-radius: 5%; 
+    }
+    .titleDetail{
+        font-size: 1.1rem;
+    }
+    .authorDetail{
+        font-size: 1rem;
+    }
+    .priceDetail{
+        font-size: 0.8rem;
+    }
+    .stockDetail{
+        font-size: 0.8rem;
+    }
+    .descriptionDetail{
+        font-size: 0.8rem;
+        grid-area: descriptionDetail;
+        margin: 2%;
+    }
 }

@@ -1,11 +1,11 @@
 .cardBook{
-    margin: 0px 50px;
-    margin-left: 10%;
     width: 220px;
     padding: 10px;
-    border: 4px double #4c394e;
+    border: 3px solid #4c394e;
     border-top-left-radius: 30px;;
-    border-bottom-right-radius: 30px;;
+    border-bottom-right-radius: 30px;
+    background-color: #a7bea9;
+    box-shadow: 0px 0px 10px;
 }
 .titleBook{
     font-size: 18px;
@@ -24,11 +24,6 @@
     height: 260px;
 }
 
-.stockBook{
-    margin: 10px 0px 5px 0px;
-    font-size: 13px;
-}
-
 .priceBook{
     font-size: 13px;
     font-weight: 400;
@@ -39,8 +34,7 @@
 .detailProduct{
     margin-top: 5px;
     border: none;
-    color: black;
-    background-color: #beaed3;
+    background-color: #354f52;
     padding: 5px 5px;
     text-align: center;
     display: inline-block;
@@ -49,12 +43,13 @@
 }
 
 .detailProduct:hover{
-    background-color: #957897;
+    background-color: #52796f;
     color: white;
 }
 
 .detailProduct1{
     text-decoration: none;
+    color: white;
 }
 
 .detailProduct1:hover{

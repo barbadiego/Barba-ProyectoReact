@@ -1,8 +1,8 @@
 //@ts-check
 import React, { useContext } from 'react'
+import { myContext } from '../CartContext'
 import ItemCount from '../ItemCount/ItemCount'
 import './ItemDetail.css'
-import { myContext } from '../CartContext'
 
 
 export default function ItemDetail( { item } ) {

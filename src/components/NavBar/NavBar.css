@@ -1,8 +1,8 @@
 .style{
-    background-color: #4c394e;
+    background-color: #354f52;
     height: 140px;
-    /* background-image: url("https://i.ibb.co/XXHkR53/navbar.png");
-    background-size: 17rem; */
+    background-image: url("https://i.ibb.co/XXHkR53/navbar.png");
+    background-size: 17rem;
 }
 
 .styleFontLogo{
@@ -10,34 +10,30 @@
     font-family: 'Anek Latin', sans-serif;
     display: grid;
     grid-template-areas: 
-    'styleLogo styleWebTitle';
-    grid-template-columns: 4fr 8fr;
-}
-
-.styleFontLogo p{
-    margin: -20px;
-}
-
-.styleLogo{
-    grid-area: styleLogo;
-    color: black;
+    'styleWebTitle';
+    grid-template-columns: 12fr;
+    justify-items: center;
 }
 
 .styleWebTitle{
+    color: #e8edec;
     grid-area: styleWebTitle;
     align-self: center;
     font-size: 5rem;
     font-weight: 600;
-    text-shadow: 5px 5px 5px rgb(40, 19, 46);
-    /* text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black */
+    margin: 0px;
+    text-shadow: 0px 0px 20px rgb(0, 0, 0);
 }
 
 .barLinks{
     height: 40px;
-    background-color: #04052e;
+    background-color: #2f3e46;
+    border-top: solid 3px #cad2c5;
+    border-bottom: solid 3px #cad2c5;
 }
 
 .linkPages{
+    margin-left: 40px;
     color: white;
     display: flex;
     justify-content: center;
@@ -54,5 +50,28 @@
 
 .linkPages a:hover{
     text-decoration: underline;
-    color: rgb(190, 109, 190);
+    color: #cad2c5;
+    font-style: italic;
+    text-decoration: none;
+}
+
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 1200px) and (min-width: 761px){
+    .styleWebTitle{
+        font-size: 4rem;
+    }
+}
+
+@media only screen and (max-width: 760px) and (min-width: 321px){
+    .styleWebTitle{
+        font-size: 2.5rem;
+    }
+}
+
+@media only screen and (max-width: 320px){
+    .styleWebTitle{
+        font-size: 1.5rem;
+    }
 }

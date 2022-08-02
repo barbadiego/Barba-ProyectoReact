@@ -61,21 +61,15 @@ export default function ItemListContainer() {
     <main className="styleMainWeb">
       <ul className="linksCategory">
           <p>Categorías:</p>
-          <li><Link to={"/category/arte"}>Arte</Link></li>
-          <li><Link to={"/category/ciencia"}>Ciencia</Link></li>
-          <li><Link to={"/category/computacion"}>Computación</Link></li>
-          <li><Link to={"/category/deportes"}>Deportes</Link></li>
-          <li><Link to={"/category/derecho"}>Derecho</Link></li>
-          <li><Link to={"/category/fantasia"}>Fantasia</Link></li>
-          <li><Link to={"/category/ficcion"}>Ficción</Link></li>
-          <li><Link to={"/category/gastronomia"}>Gastronomía</Link></li>
-          <li><Link to={"/category/infantil"}>Infantil</Link></li>
-          <li><Link to={"/category/terror"}>Terror</Link></li>
-          <li><Link to={"/category/turismo"}>Turismo</Link></li>
+          <li><Link to={"/category/ciencia"} className="styleLinks">Ciencia</Link></li>
+          <li><Link to={"/category/deportes"} className="styleLinks">Deportes</Link></li>
+          <li><Link to={"/category/fantasia"} className="styleLinks">Fantasia</Link></li>
+          <li><Link to={"/category/ficcion"} className="styleLinks">Ficción</Link></li>
+          <li><Link to={"/category/terror"} className="styleLinks">Terror</Link></li>
         </ul>
         <div className="styleMainBooks">
-          {loading && "Cargando listado de libros"}{" "}
-          {error && "Error al cargar listado. Por favor, recargar página."}{" "}
+          {loading && <div className="waitingStyle">Cargando listado de libros</div>}{" "}
+          {error && <div className="waitingStyle">Error al cargar listado. Por favor, recargar página.</div>}{" "}
           {productos && <ItemList productos={productos} />}
         </div>
     </main>

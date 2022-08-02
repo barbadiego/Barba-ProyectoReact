@@ -1,8 +1,9 @@
 .bottomBar{
     margin-top: 20px;
-    height:60px;
+    height: 85px;
     width: 100%;
-    background-color: #4c394e;
+    background-color: #2f3e46;
+    position:relative;
 }
 
 .bottomText{
@@ -16,4 +17,20 @@
     padding: 6px 0px 0px 0px;
     font-style: italic;
     font-family: 'Anek Latin', sans-serif;
+}
+
+.styleIcons{
+    display: flex;
+    justify-content:center;
+    margin-top: 4px;
+    gap: 5px;
+}
+.iconRs{
+    height: 30px;
+    width: 30px;
+    color: white;
+}
+
+.iconRs:hover{
+    color: #d0f7d0;
 }

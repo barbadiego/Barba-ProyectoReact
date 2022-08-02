@@ -1,3 +1,12 @@
+.boxCart{
+    margin: 6% 20%;
+    background-image: radial-gradient(ellipse at left bottom, #84a98c,#cad2c5, #cad2c5, #84a98c);
+    border-radius: 50px;
+    padding: 0% 1.5%;
+    font-family: 'Anek Latin', sans-serif;
+    border: solid 2px;
+}
+
 /* Estilo de carrito cuando no hay productos agregados. */
 .styleCartWithoutItems{
     display: grid;
@@ -7,93 +16,22 @@
     font-size: 1.2rem;
 }
 
+.styleLinkCartWithoutItems{
+    color: #354f52;
+    font-weight: 600;
+}
+
 /* Estilo de carrito cuando hay productos agregados. */
-.boxCart{
-    margin: 3% 20%;
-    background-image: radial-gradient(ellipse at left bottom, #baabf1, #dcd4f8, #baabf1);
-    border-radius: 50px;
-    padding: 0px 25px;
-    font-family: 'Anek Latin', sans-serif;
-}
-
-.formatButtonClearCart{
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
-}
-
-.buttonClearCart{
-    margin-left: auto;
-    order: 2;
-    padding: 4px;
-    cursor: pointer;
-    grid-area: buttonClearCart;
-    background-color: #beaed3;
-    border: solid 1px;
-    border-radius: 25px;
-    font-family: 'Anek Latin', sans-serif;
-    margin-top: 5px;
-}
-
-.buttonClearCart:hover{
-    border: solid 1px black;
-    background-color: #957897;
-    color: white;
-}
-
 .container-fluid{
     display: grid;
     grid-template-areas: 
     'columnBookCover columnAuthor columnTitle columnQuantity columnPriceItemsCart';
     grid-template-columns: 2fr 3fr 4fr 2fr 2.5fr 0.5fr;
-    font-size: 100%;
+    font-size: 1rem;
     font-weight: 600;
     border-bottom: solid 3px;
 }
 
-.totalPriceStyleText{
-    margin-left: auto;
-    order: 2;
-    display: inline-block;
-    padding: 0px 5px 5px 0px;
-    font-size: 1.5rem;
-    font-style: italic;
-    font-weight: 600;
-    color: rgb(88, 61, 124);
-}
-
-.buttonCart{
-    height: 25px;
-    width: 25px;
-    display: inline-block;
-    grid-area: buttonCart;
-    align-self: center;
-    justify-self: center;
-    cursor: pointer;
-}
-
-.buttonCart:hover{
-    color: #4f2d7c;
-    cursor: pointer;
-}
-
-.buttonForm{
-    display: block;
-    margin-top: 5px;
-    border: none;
-    color: black;
-    background-color: #beaed3;
-    padding: 5px 5px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 12px;
-    border-radius: 5%;
-}
-
-.buttonForm:hover{
-    background-color: #957897;
-    color: white;
-}
 .formatCart{
     display: grid;
     grid-template-areas: 
@@ -157,6 +95,58 @@
     align-self: center;
     justify-self: center;
 }
+.buttonCart{
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+    grid-area: buttonCart;
+    align-self: center;
+    justify-self: center;
+    cursor: pointer;
+}
+
+.buttonCart:hover{
+    color: #3c6e71;
+    cursor: pointer;
+}
+
+.formatButtonClearCart{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.buttonClearCart{
+    margin-left: auto;
+    order: 2;
+    padding: 4px;
+    cursor: pointer;
+    grid-area: buttonClearCart;
+    background-color: #354f52;
+    color: white;
+    border: solid 1px black;
+    border-radius: 25px;
+    font-family: 'Anek Latin', sans-serif;
+    margin-top: 5px;
+}
+
+.buttonClearCart:hover{
+    border: solid 1px black;
+    background-color: #52796f;
+    color: white;
+}
+
+.totalPriceStyleText{
+    margin-left: auto;
+    order: 2;
+    display: inline-block;
+    padding: 0px 5px 5px 0px;
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 600;
+    color: #354f52;
+}
+
 
 .buttonCloseOrder{
     display: flex;
@@ -165,7 +155,8 @@
     margin: auto;
     width: 150px;
     height: 50px;
-    background-color: #beaed3;
+    background-color: #354f52;
+    color: white;
     border-radius: 25px;
     font-family: 'Anek Latin', sans-serif;
     text-decoration: none;
@@ -173,7 +164,160 @@
 }
 
 .buttonCloseOrder:hover{
-    background-color: #957897;
+    background-color: #3c6e71;
     color: white;
     font-weight: 600;
+}
+
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 1200px) and (min-width: 601px){
+    .boxCart{
+        margin: 3% 8%;
+        padding: 0% 2%;;
+    }
+    .styleCartWithoutItems{
+        padding: 2%;
+        font-size: 1rem;
+    }
+
+    .container-fluid{
+        font-size: 0.8rem;
+        border-bottom: solid 3px;
+    }
+    
+    .formatCart{
+        grid-template-columns: 2fr 3fr 4fr 2fr 2.5fr 0.5fr;
+        font-size: 1rem;
+    }
+
+    .buttonCart{
+        height: 20px;
+        width: 20px;
+    }
+
+    .buttonClearCart{
+        padding: 3px;
+        font-size: 0.9rem;
+    }
+
+    .totalPriceStyleText{
+        font-size: 1.2rem;
+    }
+
+    .buttonCloseOrder{
+        width: 125px;
+        height: 40px;
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 600px) and (min-width: 321px){
+    .boxCart{
+        margin: 2% 5%;
+        padding: 0% 5%;;
+    }
+    .styleCartWithoutItems{
+        padding: 2%;
+        font-size: 0.8rem;
+    }
+    .container-fluid{
+        font-size: 0.7rem;
+        border-bottom: solid 3px;
+    }
+
+    .bookCoverCart{
+        padding-top: 25%;
+        height: 15vh;
+    }
+
+    .container-fluid{
+        display: none;
+    }
+
+    .formatCart{
+        font-size: 0.9rem;
+        display: grid;
+        grid-template-areas: 
+        'bookCoverCart authorCart'
+        'bookCoverCart titleCart'
+        'bookCoverCart quantityCart' 
+        'bookCoverCart priceItemsCart' 
+        'bookCoverCart buttonCart';
+        grid-template-columns: 4fr 8fr;
+        grid-template-rows: 60px 10px 20px 20px 20px 50px;
+    }
+
+    .buttonCart{
+        height: 18px;
+        width: 18px;
+        padding-top: 30px;
+    }
+
+    .buttonClearCart{
+        padding: 3px;
+        font-size: 0.8rem;
+    }
+
+    .totalPriceStyleText{
+        font-size: 1rem;
+    }
+
+    .buttonCloseOrder{
+        width: 100px;
+        height: 30px;
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width: 320px){
+    .boxCart{
+        margin: 4% 10%;
+    }
+
+    .styleCartWithoutItems{
+        padding: 2%;
+        font-size: 0.8rem;
+    }
+    
+    .container-fluid{
+        display: none;
+    }
+
+    .formatCart{
+        font-size: 0.8rem;
+        display: grid;
+        grid-template-areas: 
+        'bookCoverCart'
+        'authorCart'
+        'titleCart'
+        'quantityCart' 
+        'priceItemsCart' 
+        'buttonCart';
+        grid-template-columns: 12fr;
+        grid-template-rows: 150px 10px 20px 20px 20px 40px;
+    }
+
+    .buttonCart{
+        height: 18px;
+        width: 18px;
+    }
+
+    .buttonClearCart{
+        padding: 3px;
+        font-size: 0.8rem;
+    }
+
+    .totalPriceStyleText{
+        margin-left: 50%;
+        order: 2;
+        font-size: 0.8rem;
+    }
+
+    .buttonCloseOrder{
+        width: 100px;
+        height: 30px;
+        font-size: 0.8rem;
+    }
 }

@@ -4,7 +4,7 @@ import './Button.css'
 
 export default function Button( { auxInitial, add, subtract, stock }) {
   return (
-    <div>
+    <div className="styleButtonsQuantity">
         <button onClick={() => subtract()} className="quantityButtom">-</button>
 
         <p className="quantitySelected" style={{margin: "0px 10px"}}>

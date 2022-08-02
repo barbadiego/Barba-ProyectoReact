@@ -1,13 +1,16 @@
-
 .quantityButtom{
     width: 25px;
     height:25px;
     border: none;
     border-radius: 50%;
+    border: solid 1px #52796f;
+    font-size: 15px;
+    color: #52796f
+    
 }
 
 .quantityButtom:hover{
-    background-color: #957897;
+    background-color: #52796f;
     color: white;
 }
 
@@ -18,18 +21,42 @@
 .addCartButton{
     margin-top: 5px;
     border: none;
-    color: black;
-    background-color: #beaed3;
+    color: white;
+    background-color: #354f52;
     padding: 5px 5px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 12px;
     border-radius: 5%;
-
 }
 
 .addCartButton:hover{
-    background-color: #957897;
+    background-color: #52796f;
     color: white;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 760px) and (min-width: 321px){
+    .quantity{
+        display: grid;
+        place-content: center;
+    }
+    
+    .styleButtonsQuantity{
+        display:flex;
+        place-content: center;
+    }
+}
+
+@media only screen and (max-width: 320px){
+    .quantity{
+        display: grid;
+        place-content: center;
+    }
+    
+    .styleButtonsQuantity{
+        display:flex;
+        place-content: center;
+    }
 }

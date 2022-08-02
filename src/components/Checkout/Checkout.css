@@ -3,13 +3,19 @@
     justify-content: center;
     justify-items: center;
     margin: 3% 30%;
-    /* border: solid 1px; */
-    /* height:50px; */
-    /* width:50%; */
-    /* background-color: blue; */
-    /* border: solid 1px; */
-    /* border-radius: 25px; */
     font-family: 'Anek Latin', sans-serif;
+    font-size: 1.1rem;
+}
+
+.styleFontCheckout2{
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    margin: 3% 30%;
+    font-family: 'Anek Latin', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #354f52;
 }
 
 .styleForm{
@@ -35,8 +41,8 @@
 .styleButtonCheckout{
     font-family: 'Anek Latin', sans-serif;
     border: none;
-    color: black;
-    background-color: #beaed3;
+    background-color: #354f52;
+    color: white;
     padding: 5px 5px;
     text-align: center;
     text-decoration: none;
@@ -46,6 +52,62 @@
 }
 
 .styleButtonCheckout:hover{
-    background-color: #957897;
+    background-color: #3c6e71;
     color: white;
+    cursor: pointer;
+}
+
+.returnMain{
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    margin: 50px 0px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    color: #3c6e71;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 1000px) and (min-width: 301px){
+    .styleFontCheckout{
+        margin: 5%;
+        font-size: 1rem;
+    }
+
+    .styleFontCheckout2{
+        margin: 3% 30%;
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+    .returnMain{
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 300px){
+    .styleFontCheckout{
+        margin: 1%;
+        font-size: 1rem;
+    }
+
+    .styleFontCheckout2{
+        margin: 3% 30%;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    .returnMain{
+        font-size: 1rem;
+    }
+    .styleInput{
+        width: 90%;
+        margin: 5px 0px;
+        padding: 10px;
+        font-family: 'Anek Latin', sans-serif;
+        border: solid 1px;
+        border-radius: 5px;
+    }
 }
