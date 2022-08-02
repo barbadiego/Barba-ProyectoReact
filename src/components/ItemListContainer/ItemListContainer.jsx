@@ -66,6 +66,7 @@ export default function ItemListContainer() {
           <li><Link to={"/category/fantasia"} className="styleLinks">Fantasia</Link></li>
           <li><Link to={"/category/ficcion"} className="styleLinks">Ficción</Link></li>
           <li><Link to={"/category/terror"} className="styleLinks">Terror</Link></li>
+          <li><Link to={"/"} className="styleLinks">Todos</Link></li>
         </ul>
         <div className="styleMainBooks">
           {loading && <div className="waitingStyle">Cargando listado de libros</div>}{" "}
