@@ -7,7 +7,7 @@ La web consiste en un e-commerce de una librería, la cual permite observar los 
 La misma es responsive para funcionar en distintas resolución y dispositivos móvil.
 
 
-# _Desarrolado con:_
+# _Desarrollado con:_
 - HTML/CSS
 - JavaScript
 - React
