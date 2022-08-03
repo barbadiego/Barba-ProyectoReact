@@ -29,7 +29,10 @@ export default function ItemCount({ stock, onAdd }) {
         <div onClick={() => setShowButton(!showButton)}><button onClick={() => onAdd(auxInitial)} disabled={stock < 1 ? true : false} className="addCartButton">Agregar al carrito</button></div>
       </>
        : 
-       <Link to={"/cart"}><button className="addCartButton">Terminar compra</button></Link>
+       <div className="buttonItems">
+        <Link to={"/"}><button className="addCartButton">Seguir comprando</button></Link>
+        <Link to={"/cart"}><button className="addCartButton">Terminar compra</button></Link>
+       </div>
       }
     </div>
   );

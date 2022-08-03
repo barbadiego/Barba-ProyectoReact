@@ -18,6 +18,11 @@
     display: inline-block; 
 }
 
+.buttonItems{
+    display: flex;
+    flex-direction: column;
+}
+
 .addCartButton{
     margin-top: 5px;
     border: none;
@@ -42,6 +47,10 @@
         display: grid;
         place-content: center;
     }
+
+    .buttonItems{
+        align-items: center;
+    }
     
     .styleButtonsQuantity{
         display:flex;
@@ -53,6 +62,10 @@
     .quantity{
         display: grid;
         place-content: center;
+    }
+
+    .buttonItems{
+        align-items: center;
     }
     
     .styleButtonsQuantity{
