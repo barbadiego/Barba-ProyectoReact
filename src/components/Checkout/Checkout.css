@@ -2,7 +2,7 @@
     display: grid;
     justify-content: center;
     justify-items: center;
-    margin: 3% 30%;
+    margin: 0% 30%;
     font-family: 'Anek Latin', sans-serif;
     font-size: 1.1rem;
 }
@@ -49,6 +49,7 @@
     display: inline-block;
     border-radius: 25px;
     width: 50%;
+    margin-top: 3%;
 }
 
 .styleButtonCheckout:hover{

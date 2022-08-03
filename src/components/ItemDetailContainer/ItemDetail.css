@@ -151,7 +151,7 @@
     .descriptionDetail{
         font-size: 1rem;
         grid-area: descriptionDetail;
-        margin: 2%;
+        margin: 2% 10%;
     }
 }
 
@@ -195,6 +195,6 @@
     .descriptionDetail{
         font-size: 0.8rem;
         grid-area: descriptionDetail;
-        margin: 2%;
+        margin: 2% 10%;
     }
 }
